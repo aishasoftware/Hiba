@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fields>
+    <field>
+				<name>packUserId</name>
+				<nameEng>packUserId</nameEng>
+				<nameArb></nameArb>
+				<type>text</type>
+				<useAs>Add,View,Update,Summary</useAs>
+				<boxSize>30</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>all,anonymousUser,Admin</enabledFor>
+				<accessedBy>all,anonymousUser,Admin</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>packUserId</saveInField>
+			</field>
+			
+		<field>
+		<name>packageId</name>
+				<nameEng>packageId</nameEng>
+				<nameArb></nameArb>
+				<type>text</type>
+					<useAs>Add,View,Update,Summary</useAs>
+				<boxSize>30</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>all,anonymousUser,Admin</enabledFor>
+				<accessedBy>all,anonymousUser,Admin</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>packageId</saveInField>
+			</field>	
+			
+			 <field>
+			 <name>status</name>
+				<nameEng>status</nameEng>
+				<nameArb></nameArb>
+				<type>text</type>
+				<useAs>View</useAs>
+				<boxSize>30</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>all,anonymousUser,Admin</enabledFor>
+				<accessedBy>all,anonymousUser,Admin</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>status</saveInField>
+			</field>
+			
+</fields>

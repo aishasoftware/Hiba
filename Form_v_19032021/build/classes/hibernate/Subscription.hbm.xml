@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="aisha.bean">
+	<class name="Subscription" table="SUBSCRIPTION">
+
+
+    <id name="id">
+     	<generator class="org.hibernate.id.enhanced.SequenceStyleGenerator">
+				<param name="table">seq_id</param>
+				<param name="column">next_val</param>              
+        </generator>
+    </id>
+
+<!-- <version name="version" column="Version" /> -->
+<property name="packageId" column="PACKAGE_ID" type="java.lang.Integer" not-null="false" length="256" />
+<property name="packUserId" column="USER_ID" type="java.lang.Integer" not-null="false" length="256" />
+<property name="startTime" column="START_TIME" type="java.util.Date" not-null="false" length="256" />
+<property name="endTime" column="END_TIME" type="java.util.Date" not-null="false" length="256" />
+<property name="status" column="STATUS" type="java.lang.String" not-null="false" length="256" />
+<!-- <property name="LastUpdatedBy" column="LAST_UPDATED_BY" type="java.lang.String" not-null="false" length="256" />
+<property name="createdBy" column="CREATOR_ID" type="java.lang.String" not-null="false" length="256" />
+<property name="userId" column="USER_ID" type="java.lang.String" not-null="false" length="256" />
+<property name="creationTime" column="CREATION_TIME" type="java.util.Date" not-null="false" length="256" />
+<property name="LastUpdateTime" column="LAST_UPDATE_TIME" type="java.util.Date" not-null="false" length="256" />
+  -->       
+        </class>
+</hibernate-mapping>

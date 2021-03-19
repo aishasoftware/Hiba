@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="aisha.bean">
+	<class name="Application" table="APPLICATION">
+
+
+			<id name="id" type="java.lang.Long" column="id">
+			<generator class="org.hibernate.id.SequenceHiLoGenerator">
+				<param name="table">HibernateUniqueKey</param>
+				<param name="column">NexHiValue</param>
+			</generator>
+		</id>
+
+					<property name="field1" column="FIELD1"
+			type="java.lang.String" not-null="false" length="256" />
+					<property name="field2" column="FIELD2"
+			type="java.lang.String" not-null="false" length="256" />
+				<property name="field3" column="FIELD3"
+			type="java.lang.String" not-null="false" length="256" />
+			
+					<property name="field4" column="FIELD4"
+			type="java.lang.String" not-null="false" length="256" />
+					<property name="field5" column="FIELD5"
+			type="java.lang.String" not-null="false" length="256" />
+				<property name="field6" column="FIELD6"
+			type="java.lang.String" not-null="false" length="256" />
+			
+					<property name="field7" column="FIELD7"
+			type="java.lang.String" not-null="false" length="256" />
+					<property name="field8" column="FIELD8"
+			type="java.lang.String" not-null="false" length="256" />
+				<property name="field9" column="FIELD9"
+			type="java.lang.String" not-null="false" length="256" />
+			
+					<property name="field10" column="FIELD10"
+			type="java.lang.String" not-null="false" length="256" />
+					<property name="field11" column="FIELD11"
+			type="java.lang.String" not-null="false" length="256" />
+<property name="field12" column="FIELD12"
+			type="java.lang.String" not-null="false" length="256" />
+					<property name="field13" column="FIELD13"
+			type="java.lang.String" not-null="false" length="256" />
+
+<property name="field14" column="FIELD14"
+			type="java.lang.String" not-null="false" length="256" />
+					<property name="field15" column="FIELD15"
+			type="java.lang.String" not-null="false" length="256" />
+
+
+<property name="field16" column="FIELD16" type="java.lang.String" not-null="false" length="256" />
+<property name="field17" column="FIELD17" type="java.lang.String" not-null="false" length="256" />
+<property name="field18" column="FIELD18" type="java.lang.String" not-null="false" length="256" />
+<property name="field19" column="FIELD19" type="java.lang.String" not-null="false" length="256" />
+<property name="field20" column="FIELD20" type="java.lang.String" not-null="false" length="256" />
+<property name="field21" column="FIELD21" type="java.lang.String" not-null="false" length="256" />
+<property name="field22" column="FIELD22" type="java.lang.String" not-null="false" length="256" />
+<property name="field23" column="FIELD23" type="java.lang.String" not-null="false" length="256" />
+<property name="field24" column="FIELD24" type="java.lang.String" not-null="false" length="256" />
+<property name="field25" column="FIELD25" type="java.lang.String" not-null="false" length="256" />
+<property name="field26" column="FIELD26" type="java.lang.String" not-null="false" length="256" />
+<property name="field27" column="FIELD27" type="java.lang.String" not-null="false" length="256" />
+<property name="field28" column="FIELD28" type="java.lang.String" not-null="false" length="256" />
+<property name="field29" column="FIELD29" type="java.lang.String" not-null="false" length="256" />
+<property name="field30" column="FIELD30" type="java.lang.String" not-null="false" length="256" />
+
+<property name="progName" column="PROGRAM_NAME" type="java.lang.String" not-null="false" length="256" />
+
+<property name="appStatus" column="APP_STATUS" type="java.lang.String" not-null="false" length="256" />
+<property name="interviewComment" column="INTERVIEW_COMMENT" type="java.lang.String" not-null="false" length="256" />
+<property name="ev_1_comment" column="EVALUATION_1_COMMENT" type="java.lang.String" not-null="false" length="256" />
+<property name="ev_2_comment" column="EVALUATION_2_COMMENT" type="java.lang.String" not-null="false" length="256" />
+<property name="ev_3_comment" column="EVALUATION_3_COMMENT" type="java.lang.String" not-null="false" length="256" />
+<property name="ev_4_comment" column="EVALUATION_4_COMMENT" type="java.lang.String" not-null="false" length="256" />
+<property name="ev_5_comment" column="EVALUATION_5_COMMENT" type="java.lang.String" not-null="false" length="256" />
+
+<property name="intv_1_comment" column="INTERVIEW_1_COMMENT" type="java.lang.String" not-null="false" length="256" />
+<property name="intv_2_comment" column="INTERVIEW_2_COMMENT" type="java.lang.String" not-null="false" length="256" />
+<property name="intv_3_comment" column="INTERVIEW_3_COMMENT" type="java.lang.String" not-null="false" length="256" />
+<property name="intv_4_comment" column="INTERVIEW_4_COMMENT" type="java.lang.String" not-null="false" length="256" />
+<property name="intv_5_comment" column="INTERVIEW_5_COMMENT" type="java.lang.String" not-null="false" length="256" />
+
+<property name="eva_1" column="EVA_1" type="java.lang.String" not-null="false" length="256" />
+<property name="eva_2" column="EVA_2" type="java.lang.String" not-null="false" length="256" />
+<property name="eva_3" column="EVA_3" type="java.lang.String" not-null="false" length="256" />
+<property name="eva_4" column="EVA_4" type="java.lang.String" not-null="false" length="256" />
+<property name="eva_5" column="EVA_5" type="java.lang.String" not-null="false" length="256" />
+
+<property name="intv_1" column="INTV_1" type="java.lang.String" not-null="false" length="256" />
+<property name="intv_2" column="INTV_2" type="java.lang.String" not-null="false" length="256" />
+<property name="intv_3" column="INTV_3" type="java.lang.String" not-null="false" length="256" />
+<property name="intv_4" column="INTV_4" type="java.lang.String" not-null="false" length="256" />
+<property name="intv_5" column="INTV_5" type="java.lang.String" not-null="false" length="256" />
+
+<property name="app_Id" column="APP_ID" type="java.lang.Long" not-null="false" length="256" />
+<property name="applicantId" column="TALENT_ID" type="java.lang.Long" not-null="false" length="256" />
+<property name="applicantType" column="APPLICANT_TYPE" type="java.lang.String" not-null="false" length="256" />
+<property name="ev_1_score" column="EVALUATION_1_SCORE" type="java.lang.Float" not-null="false" length="256" />
+<property name="ev_2_score" column="EVALUATION_2_SCORE" type="java.lang.Float" not-null="false" length="256" />
+<property name="ev_3_score" column="EVALUATION_3_SCORE" type="java.lang.Float" not-null="false" length="256" />
+<property name="ev_4_score" column="EVALUATION_4_SCORE" type="java.lang.Float" not-null="false" length="256" />
+<property name="ev_5_score" column="EVALUATION_5_SCORE" type="java.lang.Float" not-null="false" length="256" />
+
+<property name="intv_1_score" column="INTERVIEW_1_SCORE" type="java.lang.Float" not-null="false" length="256" />
+<property name="intv_2_score" column="INTERVIEW_2_SCORE" type="java.lang.Float" not-null="false" length="256" />
+<property name="intv_3_score" column="INTERVIEW_3_SCORE" type="java.lang.Float" not-null="false" length="256" />
+<property name="intv_4_score" column="INTERVIEW_4_SCORE" type="java.lang.Float" not-null="false" length="256" />
+<property name="intv_5_score" column="INTERVIEW_5_SCORE" type="java.lang.Float" not-null="false" length="256" />
+
+
+<property name="intv_avg_score" column="AVG_INTERVIEW_SCORE" type="java.lang.Float" not-null="false" length="256" />
+<property name="ev_avg_score" column="AVG_EVALUATION_SCORE" type="java.lang.Float" not-null="false" length="256"/>
+<property name="submTime" column="SUBMISSION_TIME" type="java.util.Date" not-null="false" length="256" />
+<property name="noOfEvaluators" column="evaluator_count" type="java.lang.Integer" not-null="false" length="256" />
+<property name="noOfInterviewers" column="interviewer_count" type="java.lang.Integer" not-null="false" length="256" />
+<!-- <property name="lastModifiedBy" column="LAST_MODIFIED_BY"
+			type="java.lang.String" not-null="false" length="256" /> -->
+
+<property name="reviewComment" column="REVIEW_COMMENT"
+			type="java.lang.String" not-null="false" length="256" />
+
+	<!-- 	<property name="lastModificationTime"
+			column="LAST_MODIFICATION_TIME" type="java.util.Date" not-null="false"
+			length="256" />
+ -->
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+
+<!-- ===================================================================== -->
+<!--                                                                       -->
+<!--  Log4j Configuration                                                  -->
+<!--                                                                       -->
+<!-- ===================================================================== -->
+
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+  
+  
+	 <appender name="ConsoleAppender" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.SimpleLayout"/>
+	</appender> 
+	
+	<appender name="FileAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		
+		<param name="File" value="platform.log"/>
+		<param name="Append" value="true"/>
+		<param name="DatePattern" value="'.'yyyy-MM-dd"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="date/time: %20d{dd MMM yyyy HH:mm:ss} [%t] %5p %c - %m%n"/>
+		</layout>
+	</appender>
+		
+
+<!-- 	<appender name="SpringFileAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		
+		<param name="File" value="platform_spring.log"/>
+		<param name="Append" value="true"/>
+		<param name="DatePattern" value="'.'yyyy-MM-dd"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="date/time: %20d{dd MMM yyyy HH:mm:ss} [%t] %5p %c - %m%n"/>
+		</layout>
+	</appender> -->
+	
+	<!-- 	<appender name="HibernateFileAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		
+		<param name="File" value="platform_hibernate.log"/>
+		<param name="Append" value="true"/>
+		<param name="DatePattern" value="'.'yyyy-MM-dd"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="date/time: %20d{dd MMM yyyy HH:mm:ss} [%t] %5p %c - %m%n"/>
+		</layout>
+	</appender> -->
+   <!-- ================ -->
+   <!-- Limit categories -->
+   <!-- ================ -->
+	<!-- Sample of how to switch off / on debugging for different parts of the application
+                in this case , the plugin-manager -->
+
+   <!-- Limit the org.apache category to INFO as its DEBUG is verbose -->
+	
+   <category name="aisha">
+		<priority value="DEBUG"/>
+				<appender-ref ref="ConsoleAppender"/>
+				<appender-ref ref="FileAppender"/> 
+		<!-- <appender-ref ref="FileAppender"/> -->
+   </category> 
+   
+   
+<!--       <category name="org.springframework">
+		<priority value="DEBUG"/>
+		<appender-ref ref="ConsoleAppender"/>
+		<appender-ref ref="SpringFileAppender"/>
+   </category>  -->
+   
+   
+   <category name="org.hibernate.SQL">
+		<priority value="debug"/>
+			<appender-ref ref="ConsoleAppender"/>
+			<!-- <appender-ref ref="HibernateFileAppender"/> -->
+   </category>
+  
+	<root>
+	<appender-ref ref="ConsoleAppender"/>
+	<appender-ref ref="FileAppender"/> 
+<!-- 	<appender-ref ref="FileAppender"/> 
+	<appender-ref ref="HibernateFileAppender"/> -->
+<!-- 	<appender-ref ref="SpringAppender"/> 
+	<appender-ref ref="HibernateFileAppender"/>  -->
+		<priority value ="debug"/>
+	</root>
+
+  <!--   for Jasper  -->
+
+  <!--
+  There are five levels of logging in log4j: 
+	DEBUG 
+	INFO 
+	WARN 
+	ERROR 
+	FATAL 
+
+  -->
+
+
+</log4j:configuration>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>HistoricPaper</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+
+<script type="text/javascript"
+	th:src="@{/resources/jsAppForm/cufon-yui.js}"></script>
+<script type="text/javascript"
+	th:src="@{/resources/jsAppForm/js/georgiai.js}"></script>
+<script type="text/javascript"
+	th:src="@{/resources/jsAppForm/js/cuf_run.js}"></script>
+
+
+    <link rel="stylesheet" th:href="@{/resources/table/paginate.css}"></link>
+    <link rel="stylesheet" th:href="@{/resources/table/ligne.css}"></link>
+    <script type="text/javascript" th:src="@{/resources/table/paginate.js}"></script>
+
+    <style>
+        *{
+            font-family: sans-serif;
+         }
+    </style>
+    
+<!-- Icons font CSS-->
+<link
+	th:href="@{/resources/vendorAppForm/mdi-font/css/material-design-iconic-font.min.css}"
+	rel="stylesheet" media="all"></link>
+<link
+	th:href="@{/resources/vendorAppForm/font-awesome-4.7/css/font-awesome.min.css}"
+	rel="stylesheet" media="all"></link>
+<!-- Font special for pages-->
+<link
+	href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+	rel="stylesheet"></link>
+
+<!-- Vendor CSS-->
+<link th:href="@{/resources/vendorAppForm/select2/select2.min.css}"
+	rel="stylesheet" media="all"></link>
+<link
+	th:href="@{/resources/vendorAppForm/datepicker/daterangepicker.css}"
+	rel="stylesheet" media="all"></link>
+
+<!-- it appears as white box in the upper left corner of the screen -->
+<!-- <link href="vendorAppForm/datepicker/daterangepicker.css" rel="stylesheet" media="all">-->
+
+<link th:href="@{/resources/cssAppForm/appFormStyle.css}"
+	rel="stylesheet" type="text/css"></link>
+</head>
+<body>
+	<!-- START PAGE SOURCE -->
+	<div class="main">
+
+		<div class="header">
+			<div class="header_resize">
+				<div class="logo">
+					<h1>
+						<a href="index.html">HistoricPaper<br /> <small>Best
+								and necessary.</small></a>
+					</h1>
+				</div>
+				<div class="search"></div>
+				<div class="clr"></div>
+
+				<div class="clr"></div>
+				<div class="logoimg">
+					<h2>
+						You can find more of my free template designs at my website.<br />
+						For premium commercial designs, you can check out<br /> <span>MyWebsite.com.</span>
+					</h2>
+				</div>
+			</div>
+		</div>
+		<div class="body">
+			<div class="body_resize">
+
+				<div class="card-body">
+				<form id="contact" action="#" th:action="@{'/'+${controllerName}+'/submitEvaluation'(id=${bean.id})}" th:object="${bean}" method="post">
+				  <table class="myTable table hover">
+        <tbody>
+
+        <th:span th:each="evaField : ${evaFields}"> 
+
+         
+                <tr>
+         <td th:text="#{${beanName}+'.'+${evaField}}"></td>
+        <td th:object="${bean}"> <input class="input--style-1" 
+tabindex="1" autofocus="autofocus" maxlength="30" size="35" th:field="*{__${evaField}__}"/>
+
+
+</td>
+    
+          
+ </tr>
+ </th:span>
+
+        </tbody>
+    </table>
+         <div class="p-t-20">
+                            <button class="btn btn--radius btn--green" type="submit">Submit</button>
+                        </div>
+				</form>
+					<section class="light-content services"></section>
+
+
+				</div>
+
+				<div class="right"></div>
+				<div class="clr"></div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="footer_resize">
+				<p class="lf">
+					Copyright &copy; 2010 <a href="#">SiteName</a> - All Rights
+					Reserved
+				</p>
+				<p class="rf">
+					Design by <a href="http://www.hotwebsitetemplates.net">Hot
+						Website Templates</a>
+				</p>
+				<div class="clr"></div>
+			</div>
+			<div class="clr"></div>
+		</div>
+
+
+	</div>
+
+	<!-- Jquery JS-->
+	<script src="@{/resources/vendorAppForm/jquery/jquery.min.js}"></script>
+	<!-- Vendor JS-->
+	<script th:src="@{/resources/vendorAppForm/select2/select2.min.js}"></script>
+	<script
+		th:src="@{/resources/vendorAppForm/datepicker/daterangepicker.js}"></script>
+	<script th:src="@{/resources/vendorAppForm/datepicker/moment.min.js}"></script>
+
+	<!-- Main JS-->
+	<script src="@{/resources/jsAppForm/global.js}"></script>
+	<!-- END PAGE SOURCE -->
+	
+	  <script>
+
+    let options = {
+        numberPerPage:5, //Cantidad de datos por pagina
+        goBar:true, //Barra donde puedes digitar el numero de la pagina al que quiere ir
+        pageCounter:true, //Contador de paginas, en cual estas, de cuantas paginas
+    };
+
+    let filterOptions = {
+        el:'#searchBox' //Caja de texto para filtrar, puede ser una clase o un ID
+    };
+
+    paginate.init('.myTable',options,filterOptions);
+</script>  
+</body>
+</html>

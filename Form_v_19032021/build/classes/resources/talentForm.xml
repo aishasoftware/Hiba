@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+			
+			<question>
+				<qID>1</qID>
+				<qType>text</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>What is your middle name?</qContent>
+				<saveInField>MIDDLE_NAME</saveInField>
+			</question>
+			<question>
+				<qID>1</qID>
+				<qType>text</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>What is your first name?</qContent>
+				<saveInField>FIRST_NAME</saveInField>
+			</question>
+
+			
+						
+			<question>
+				<qID>1</qID>
+				<qType>text</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>What is your last name?</qContent>
+				<saveInField>LAST_NAME</saveInField>
+			</question>
+						<question>
+				<qID>1</qID>
+				<qType>text</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>What is your age?</qContent>
+				<saveInField>AGE</saveInField>
+			</question>
+			
+			<question>
+				<qID>1</qID>
+				<qType>text</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>What is your address?</qContent>
+				<saveInField>ADDRESS</saveInField>
+			</question>
+			
+				<question>
+				<qID>1</qID>
+				<qType>text</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>What is your occupation sector?</qContent>
+				<saveInField>OCCUPATION_SECTOR</saveInField>
+			</question>
+</questions>

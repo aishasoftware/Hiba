@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="aisha.bean">
+	<class name="Program" table="PROGRAM">
+
+
+			<id name="id" type="java.lang.Long" column="id">
+			<generator class="org.hibernate.id.SequenceHiLoGenerator">
+				<param name="table">HibernateUniqueKey</param>
+				<param name="column">NexHiValue</param>
+			</generator>
+		</id>
+
+<!-- <version name="version" column="Version" /> -->
+
+<property name="programName" column="PROGRAM_NAME" type="java.lang.String" not-null="false" length="256" />
+<property name="description" column="DESCRIPTION" type="java.lang.String" not-null="false" length="256" />
+<property name="interv_1" column="INTERV_1" type="java.lang.String" not-null="false" length="256" />
+<property name="interv_2" column="INTERV_2" type="java.lang.String" not-null="false" length="256" />
+<property name="interv_3" column="INTERV_3" type="java.lang.String" not-null="false" length="256" />
+<property name="interv_4" column="INTERV_4" type="java.lang.String" not-null="false" length="256" />
+<property name="interv_5" column="INTERV_5" type="java.lang.String" not-null="false" length="256" />
+<property name="eva_1" column="EVA_1" type="java.lang.String" not-null="false" length="256" />
+<property name="eva_2" column="EVA_2" type="java.lang.String" not-null="false" length="256" />
+<property name="eva_3" column="EVA_3" type="java.lang.String" not-null="false" length="256" />
+<property name="eva_4" column="EVA_4" type="java.lang.String" not-null="false" length="256" />
+<property name="eva_5" column="EVA_5" type="java.lang.String" not-null="false" length="256" />
+
+<property name="investorName" column="INVESTOR_NAME" type="java.lang.String" not-null="false" length="256" />
+
+<property name="noOfEvaluators" column="eva_count" type="java.lang.String" not-null="false" length="256" />
+<property name="appFile1" column="APPFILE1" type="java.lang.String" not-null="false" length="256" />
+<property name="noOfInterviewers" column="interv_count" type="java.lang.String" not-null="false" length="256" />
+<!-- 
+<property name="appFile2" column="APPFILE2" type="java.lang.String" not-null="false" length="256" />
+<property name="appFile3" column="APPFILE3" type="java.lang.String" not-null="false" length="256" />
+<property name="appFile4" column="APPFILE4" type="java.lang.String" not-null="false" length="256" />
+ -->
+<property name="investorId" column="INVESTOR_ID" type="java.lang.Integer" not-null="false" length="256" />
+<property name="startTime" column="START_TIME" type="java.util.Date" not-null="false" length="256" />
+<property name="endTime" column="END_TIME" type="java.util.Date" not-null="false" length="256" />
+
+
+<property name="status" column="STATUS" type="java.lang.String" not-null="false" length="256" />
+<property name="LastUpdatedBy" column="LAST_UPDATED_BY" type="java.lang.String" not-null="false" length="256" />
+<property name="createdBy" column="CREATOR" type="java.lang.String" not-null="false" length="256" />
+<property name="creationTime" column="CREATION_TIME" type="java.util.Date" not-null="false" length="256" />
+<property name="LastUpdateTime" column="LAST_UPDATE_TIME" type="java.util.Date" not-null="false" length="256" />
+        
+        </class>
+</hibernate-mapping>

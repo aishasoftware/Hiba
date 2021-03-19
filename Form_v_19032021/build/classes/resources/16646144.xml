@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+	<!-- 		<question>
+				<qID>Q</qID>
+				<qType>language</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>					
+				<qContent>Application Language </qContent>
+				<qContentArabic> اللغة المستخدمة في ملء البيانات </qContentArabic>
+				
+				<saveInField>field24</saveInField>
+			</question> -->
+		
+<!-- 			
+		    <question>
+				<qID>Q18</qID>
+				<qType>section</qType>
+				<qBoxSize></qBoxSize>
+				<qMaxLength></qMaxLength>				
+				<qContent>Part One: Company Information</qContent>
+				<qContentArabic>NA</qContentArabic>
+				<saveInField>NA</saveInField>
+			</question> -->
+			
+			<question>
+				<qID>Q1</qID>
+				<qType>sector</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>Which track you would like to apply for ?</qContent>
+				<qContentArabic>ما المسار الذي تريد التقديم له؟</qContentArabic>
+				<required>required</required>
+				<saveInField>field1</saveInField>
+				
+			</question>
+			
+			<question>
+				<qID>Q2</qID>
+				<qType>text</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>Why are you interested in the Technology Incubation Program ?</qContent>
+				<qContentArabic>لماذا انت مهتم بحضور برنامج الاحتضان التكنولوجي  ؟</qContentArabic>
+				<required></required>				
+				<saveInField>field2</saveInField>
+		
+			</question>
+			
+			<question>
+				<qID>Q3</qID>
+				<qType>Yes/No</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>If shortlisted you must attend an illumination forum and hackathons to be organized under the program as part of the selection process . Do you agree ?</qContent>
+				<qContentArabic>إذا تم إدراجك في القائمة الاولية ، فيجب عليك حضور منتدى توضيحي  وهاكاثون سيتم تنظيمه في إطار البرنامج كجزء من عملية الاختيار. هل توافق ؟</qContentArabic>
+				<required>required</required>
+				<saveInField>field3</saveInField>
+			
+
+				
+			</question>
+	
+			<question>
+				<qID>Q4</qID>
+				<qType>Yes/No</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>For females only: a training has been designed under the name “Girl Power” . Would you be interested to attend ?</qContent>
+				<qContentArabic>للإناث فقط: تم تصميم تدريب تحت اسم "قدرة البنات"هل انت مهتمة بالحضور؟</qContentArabic>
+				<required>required</required>
+				<saveInField>field4</saveInField>
+				
+
+
+				
+			</question>
+	
+			<question>
+				<qID>Q5</qID>
+				<qType>optional</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>Why are you interested in attending the Girl Power training event?</qContent>
+				<qContentArabic>لماذا ترغبين في حضور برنامج  قدرة البنات ؟</qContentArabic>
+				<!-- <required></required> -->
+				<saveInField>field5</saveInField>
+				
+
+				
+			</question>
+			
+			<question>
+				<qID>Q6</qID>
+				<qType>source</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>How did you hear about the Technology Incubation Program?</qContent>
+				<qContentArabic>كيف سمعت عن البرنامج ؟</qContentArabic>
+				<required></required>
+				<saveInField>field6</saveInField>
+				
+
+				
+			</question>
+			
+			<!-- <question>
+				<qID>Q7</qID>
+				<qType>shortParag</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>In one sentence, what is your company’s product or service?</qContent>
+				<qContentArabic>في جملة واحدة ، ما هو منتج أو خدمة شركتك؟</qContentArabic>
+				<required>required</required>
+				<saveInField>field7</saveInField>
+				
+			</question> -->
+			
+		<!-- 	<question>
+				<qID>Q8</qID>
+				<qType>number</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>How many co founders of this business ?</qContent>
+				<qContentArabic>كم عدد مؤسسي هذا العمل؟</qContentArabic>
+				<required>required</required>
+				<saveInField>field8</saveInField>
+				
+			</question>
+			
+
+			<question>
+				<qID>Q9</qID>
+				<qType>shortParag</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>About the team , how do your skills complement each other, and what is the dedication of each partner ?</qContent>
+				<qContentArabic>حول الفريق ، كيف تكمل مهاراتكم بعضها البعض ، وما هو مدى التزام كل شريك؟</qContentArabic>
+				<required>required</required>
+				<saveInField>field9</saveInField>
+				
+			</question>
+
+			<question>
+				<qID>Q10</qID>
+				<qType>shortParag</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>Give us the pitch or short description of your startup. 
+This may be used in public materials. Please proof your text accordingly.</qContent>
+				<qContentArabic>قم بكتابة وصف قصير لفكرتك  .. ملحوظة: قد يتم استخدام هذا في المواد العامة ،  كمثال:الاعلان عن الفكرة او المشروع في السوشيال ميديا او عند الاختيار. يرجى مراجعة النص الخاص بك وفقا لذلك</qContentArabic>
+				<required>required</required>
+				<saveInField>field10</saveInField>
+				
+			</question>
+
+			<question>
+				<qID>Q11</qID>
+				<qType>shortParag</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>What is the problem you are trying to solve or the value you are creating ? </qContent>
+				<qContentArabic>ما هي المشكلة التي تحاول حلها أو القيمة التي تحاول اضافتها ؟</qContentArabic>
+				<required>required</required>
+				<saveInField>field11</saveInField>
+				
+			</question>
+			
+			<question>
+				<qID>Q12</qID>
+				<qType>shortParag</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>Tell us about your market, unique/innovative in your company/solution ? how you are going to get customers ? please include your knowledge of major competitors .</qContent>
+				<qContentArabic>أخبرنا عن السوق الخاص بك  ، ما الفريد /مبتكر في شركتك أو الحل الذي تقدمه ؟ كيف ستحصل على عملاء؟ يرجى تضمين معرفتك للمنافسين الرئيسيين</qContentArabic>
+				<required>required</required>
+				<saveInField>field12</saveInField>
+				
+			</question>
+			
+			<question>
+				<qID>Q13</qID>
+				<qType>shortParag</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>What is your business growth plan ?</qContent>
+				<qContentArabic>ما هي خطتك للنمو بمشروعك ؟</qContentArabic>
+				<required>required</required>
+				<saveInField>field13</saveInField>
+				
+			</question>
+			
+		    <question>
+				<qID>Q18</qID>
+				<qType>section</qType>
+				<qBoxSize></qBoxSize>
+				<qMaxLength></qMaxLength>				
+				<qContent>Part Two: Investment Profile </qContent>
+				<qContentArabic>NA</qContentArabic>
+				<saveInField>NA</saveInField>
+			</question>
+			
+			<question>
+				<qID>Q14</qID>
+				<qType>shortParag</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>how are you planning to generate money out of your business idea ? </qContent>
+				<qContentArabic>كيف تخطط للحصول على الأموال من فكرة عملك؟</qContentArabic>
+				<required>required</required>
+				<saveInField>field14</saveInField>
+				
+			</question>
+			
+			<question>
+				<qID>Q15</qID>
+				<qType>busModel</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>What is the business model for your company?</qContent>
+				<qContentArabic>ما هو نموذج العمل لشركتك؟</qContentArabic>
+				<required>required</required>
+				<saveInField>field15</saveInField>
+				
+			</question>
+	
+			<question>
+				<qID>Q16</qID>
+				<qType>invest</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>How much is the amount of personal funding invested in the business ?</qContent>
+				<qContentArabic>ما مقدار التمويل الشخصي المستثمر في العمل؟</qContentArabic>
+				<required>required</required>
+				<saveInField>field16</saveInField>
+				
+			</question>
+			
+	        <question>
+				<qID>Q17</qID>
+				<qType>fundType</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>What type of funding your company already received?</qContent>
+				<qContentArabic>ما نوع التمويل الذي حصلت عليه شركتك بالفعل؟</qContentArabic>
+				<required>required</required>
+				<saveInField>field17</saveInField>
+				
+			</question>
+			
+			<question>
+				<qID>Q18</qID>
+				<qType>section</qType>
+				<qBoxSize></qBoxSize>
+				<qMaxLength></qMaxLength>				
+				<qContent>Part Three : Prospects / Potential of the business and its entrepreneur </qContent>
+				<qContentArabic>NA</qContentArabic>
+				<saveInField>NA</saveInField>
+			</question>
+			
+			<question>
+				<qID>Q18</qID>
+				<qType>shortParag</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>Why do you want to be part of the orange corners incubation program ?.</qContent>
+				<qContentArabic>لماذا تريد أن تكون جزءا من برنامج أورانج كورنرز ؟</qContentArabic>
+				<required>required</required>
+				<saveInField>field18</saveInField>
+				
+			</question>
+			
+			<question>
+				<qID>Q19</qID>
+				<qType>Yes/No</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>Are you full time committed  to the business ?</qContent>
+				<qContentArabic>هل أنت ملتزم بالعمل بدوام كامل  في هذا المشروع؟</qContentArabic>
+				<required>required</required>
+				<saveInField>field19</saveInField>
+				
+			</question>
+			
+			<question>
+				<qID>Q20</qID>
+				<qType>shortParag</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>Where is your company now including key achievements, building a team, and fundraising?</qContent>
+				<qContentArabic>أين شركتك الآن بما في ذلك الإنجازات الرئيسية ، وبناء فريق ، وجمع الأموال؟</qContentArabic>
+				<required>required</required>
+				<saveInField>field20</saveInField>
+				
+			</question>
+			
+			<question>
+				<qID>Q21</qID>
+				<qType>shortParag</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>Do you have any previous or current enrolment in other entrepreneurship development programs ? explain the reason of the enrolment .</qContent>
+				<qContentArabic>هل قمت بالمشاركة او تشارك حاليا في اي برنامج  لرواد الأعمال اخرى؟ اذا كانت الاجابة بنعم ماهو وما سبب التسجيل به.</qContentArabic>
+				<required>required</required>
+				<saveInField>field21</saveInField>
+				
+			</question>
+
+			<question>
+				<qID>Q22</qID>
+				<qType>Yes/No</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>Do you currently have sufficient income to pay the 5000 SDG program fee?</qContent>
+				<qContentArabic>هل لديك حاليا ما يكفي من الدخل لدفع رسوم التسجيل  بالبرنامج 5000 جنيه سوداني؟</qContentArabic>
+				<required>required</required>
+				<saveInField>field22</saveInField>
+				
+			</question>
+	
+			<question>
+				<qID>Q23</qID>
+				<qType>shortParag</qType>
+				<qBoxSize>32</qBoxSize>
+				<qMaxLength>32</qMaxLength>				
+				<qContent>What are you hoping to get out of this program ?</qContent>
+				<qContentArabic>ماذا تأمل في الحصول من هذا البرنامج؟</qContentArabic>
+				<required>required</required>
+				<saveInField>field23</saveInField>
+				
+			</question>	 -->
+											
+</questions>

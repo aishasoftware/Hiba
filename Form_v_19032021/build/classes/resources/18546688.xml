@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fields>
+
+		  	<field>
+			<name>field1</name>
+				<nameEng>Which track you would like to apply for ?</nameEng>
+				<nameArb>اسم الشركة الناشئة</nameArb>
+				<type>text</type>
+				<useAs>Add,View,Update,Summary</useAs>
+				<boxSize>30</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>all,anonymousUser,Admin,StartupAdmin</enabledFor>
+				<accessedBy>all,anonymousUser,Admin,StartupAdmin</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>field1</saveInField>
+			</field>
+			
+			<field>
+			<name>field2</name>
+				<nameEng>what is you name</nameEng>
+				<nameArb>القطاع</nameArb>
+				<type>shortParag</type>
+				<useAs>Add,View,Update,Summary</useAs>
+				<boxSize>30</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>all,anonymousUser,Admin,StartupAdmin</enabledFor>
+				<accessedBy>all,anonymousUser,Admin,StartupAdmin</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>field2</saveInField>
+			</field>
+	
+</fields>

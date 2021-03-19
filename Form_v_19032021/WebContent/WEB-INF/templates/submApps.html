@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>HistoricPaper</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+ 
+
+
+  <!--<link href="appForm.css" rel="stylesheet" media="all">-->
+  
+<script type="text/javascript" th:src="@{/resources/jsAppForm/cufon-yui.js}"></script>
+<script type="text/javascript" th:src="@{/resources/jsAppForm/js/georgiai.js}"></script>
+<script type="text/javascript" th:src="@{/resources/jsAppForm/js/cuf_run.js}"></script>
+
+
+  <!-- Icons font CSS-->
+    <link th:href="@{/resources/vendorAppForm/mdi-font/css/material-design-iconic-font.min.css}" rel="stylesheet" media="all"></link>
+    <link th:href="@{/resources/vendorAppForm/font-awesome-4.7/css/font-awesome.min.css}" rel="stylesheet" media="all"></link>
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet"></link>
+
+    <!-- Vendor CSS-->
+    <link th:href="@{/resources/vendorAppForm/select2/select2.min.css}" rel="stylesheet" media="all"></link>
+	<link th:href="@{/resources/vendorAppForm/datepicker/daterangepicker.css}" rel="stylesheet" media="all"></link>
+	
+	<!-- it appears as white box in the upper left corner of the screen -->
+   <!-- <link href="vendorAppForm/datepicker/daterangepicker.css" rel="stylesheet" media="all">-->
+
+	<link th:href="@{/resources/cssAppForm/appFormStyle.css}" rel="stylesheet" type="text/css"></link>
+</head>
+<body>
+
+<!-- START PAGE SOURCE -->
+<div class="main">
+
+  <div class="header">
+    <div class="header_resize">
+      <div class="logo">
+        <h1><a href="index.html">HistoricPaper<br />
+          <small>Best and necessary.</small></a></h1>
+      </div>
+      <div class="search">
+
+      </div>
+      <div class="clr"></div>
+      <div class="menu">
+        <ul>
+          <li><a href="index.html" class="active"><span>Home</span></a></li>
+          <li><a href="services.html"><span>Services</span></a></li>
+          <li><a href="about.html"><span>About Us</span></a></li>
+          <li><a href="contact.html"><span>Contact Us</span></a></li>
+        </ul>
+      </div>
+      <div class="clr"></div>
+      <div class="logoimg">
+        <h2>You can find more of my free template designs at my website.<br />
+          For premium commercial designs, you can check out<br />
+          <span>MyWebsite.com.</span></h2>
+      </div>
+    </div>
+  </div>
+  <div class="body">
+
+    <div class="body_resize">
+<!--     <img th:src="@{/resources/images/img_1.jpg}" alt="" width="84" height="90" />
+	<h2>249 Program Application<br />
+          <span><a href="#">Deadline 25 July 2019 </a></span> </h2>
+        <div class="bg"></div>
+        <p>To all talents across the country do not miss this great opportunity</p> -->
+	<div class="card-body">
+	
+	
+	<ul class="post-job-bx">
+
+	<th:span th:each="bean : ${beanList}">
+
+	<li>
+	
+	<a th:href= "@{'/'+${controllerName}+'/viewSubmittedApp'(id=${bean.id})}" >
+									<!-- <a href="/Form_v_1.0/TalentController/getTalent"> -->
+										<div class="d-flex m-b30">
+											<div class="job-post-company">
+												<!-- <span><img th:src="@{/resources/images/img_1.jpg}"/></span> -->
+											</div>
+											<div class="job-post-info">
+												<h4>Digital Marketing Executive</h4>
+												<th:span>	
+				
+			<ul>
+				<th:span th:each="field : ${addFields}">
+													<li>								
+		<!-- 	<tbody> -->
+				
+	<div class="job-time mr-auto">
+			
+	<span th:text="${bean.__${field}__}"></span>	
+	
+			<span><img th:src="@{/resources/images/img_1.jpg}"/></span>	
+	<!-- 		</tbody>  -->
+		</div>
+			</li>
+													<li><i class="fa fa-usd"></i> Full Time</li>
+													<li><i class="fa fa-clock-o"></i> Submitted on <span th:text="${bean.__${field}__}"></span></li>
+										
+											</th:span>
+												</ul>
+			</th:span>
+		
+											
+											</div>
+										</div>
+<div class="d-flex">
+									<!-- 		<div class="job-time mr-auto">
+												<span>Javascript</span>
+												<span>CSS</span>
+												<span>HTML</span>
+												<span>Bootstrap</span>
+											</div>
+											<div class="salary-bx">
+												<span>$45 Per Hour</span>
+											</div> -->
+										</div>
+										<span class="post-like fa fa-heart-o"></span>
+									</a>
+	</li>
+								</th:span>
+								</ul>
+<section class="light-content services">
+</section>
+
+             
+                </div>
+						
+      <div class="right">
+
+
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+ <!--  <div class="FBG_resize"><img src="/resources/images/search_img.gif" alt="" width="931" height="20" /></div> -->
+
+
+  
+    <div class="footer">
+    <div class="footer_resize">
+      <p class="lf">Copyright &copy; 2010 <a href="#">SiteName</a> - All Rights Reserved</p>
+      <p class="rf">Design by <a href="http://www.hotwebsitetemplates.net">Hot Website Templates</a></p>
+      <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+  </div>
+  
+</div>
+
+    <!-- Jquery JS-->
+    <script src="@{/resources/vendorAppForm/jquery/jquery.min.js}"></script>
+    <!-- Vendor JS-->
+    <script th:src="@{/resources/vendorAppForm/select2/select2.min.js}"></script>
+	    <script th:src="@{/resources/vendorAppForm/datepicker/daterangepicker.js}"></script>
+		<script th:src="@{/resources/vendorAppForm/datepicker/moment.min.js}"></script>
+  
+    <!-- Main JS-->
+    <script src="@{/resources/jsAppForm/global.js}"></script>
+<!-- END PAGE SOURCE -->
+</body>
+</html>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fields>
+
+		<field>
+			<name>applicantId</name>
+				<nameEng></nameEng>
+				<nameArb></nameArb>
+				<type>text</type>
+				<useAs>Add,View,Update,Summary</useAs>
+				<boxSize>30</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>all,Interviewer,Evaluator,Admin,StartupAdmin</enabledFor>
+				<accessedBy>all,Interviewer,Evaluator,Admin,StartupAdmin</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>applicantId</saveInField>
+			</field>
+		
+				<field>
+			<name>id</name>
+				<nameEng></nameEng>
+				<nameArb></nameArb>
+				<type>text</type>
+				<useAs>Add,View,Update,Summary</useAs>
+				<boxSize>30</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>all,Interviewer,Evaluator,Admin,StartupAdmin</enabledFor>
+				<accessedBy>all,Interviewer,Evaluator,Admin,StartupAdmin</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>id</saveInField>
+			</field>
+			
+			<field>
+			<name>appStatus</name>
+				<nameEng>appStatus</nameEng>
+				<nameArb></nameArb>
+				<type>text</type>
+				<useAs>Add,View,Update,Summary</useAs>
+				<boxSize>30</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>all,Reviewer,Admin,StartupAdmin</enabledFor>
+				<accessedBy>all,Reviewer,Admin,StartupAdmin</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>appStatus</saveInField>
+			</field>
+			
+		<field>
+			<name>submTime</name>
+				<nameEng></nameEng>
+				<nameArb></nameArb>
+				<type>text</type>
+				<useAs>Add,View,Update,Summary</useAs>
+				<boxSize>30</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>all,Interviewer,Evaluator,Admin,StartupAdmin</enabledFor>
+				<accessedBy>all,Interviewer,Evaluator,Admin,StartupAdmin</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>submTime</saveInField>
+			</field>
+						
+	<field>
+			<name>eva_score</name>
+				<nameEng>Eva Score</nameEng>
+				<nameArb></nameArb>
+				<type>select</type>
+						<options>
+			<item>1</item>
+			<item>2</item>
+			<item>3</item>
+			<item>4</item>
+			<item>5</item>
+		</options>
+				<useAs>Add,View,Update,Summary</useAs>
+				<boxSize>30</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>Evaluator,StartupAdmin</enabledFor>
+				<accessedBy>Evaluator,StartupAdmin</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>eva_score</saveInField>
+			</field>
+			
+			<field>
+			
+			<name>intv_score</name>
+				<nameEng>Intv Score</nameEng>
+				<nameArb></nameArb>
+				<type>select</type>
+						<options>
+			<item>1</item>
+			<item>2</item>
+			<item>3</item>
+			<item>4</item>
+			<item>5</item>
+		</options>
+				<useAs>Add,View,Update,Summary</useAs>
+				<boxSize>30</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>Interviewer,Admin,StartupAdmin</enabledFor>
+				<accessedBy>Interviewer,Admin,StartupAdmin</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>intv_score</saveInField>
+			</field>
+			
+		<field>
+			<name>eva_comment</name>
+				<nameEng>Evaluator Comment</nameEng>
+				<nameArb></nameArb>
+				<type>eva_comment</type>
+				<useAs>Add,View,Update,Summary</useAs>
+				<boxSize>30</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>Evaluator,Admin,StartupAdmin</enabledFor>
+				<accessedBy>Evaluator,Admin,StartupAdmin</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>eva_comment</saveInField>
+			</field>
+		
+			<field>
+			<name>intv_comment</name>
+				<nameEng>Interviewer Comment</nameEng>
+				<nameArb></nameArb>
+				<type>intv_comment</type>
+				<useAs>Add,View,Update,Summary</useAs>
+				<boxSize>30</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>Interviewer,Admin,StartupAdmin</enabledFor>
+				<accessedBy>Interviewer,Admin,StartupAdmin</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>interviewComment</saveInField>
+			</field>
+			
+</fields>

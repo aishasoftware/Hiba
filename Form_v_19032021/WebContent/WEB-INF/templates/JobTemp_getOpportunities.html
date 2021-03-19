@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+		<meta name="description" content="JobBoard - HTML Template" />
+	<meta property="og:title" content="JobBoard - HTML Template" />
+	<meta property="og:description" content="JobBoard - HTML Template" />
+	<meta property="og:image" content="JobBoard - HTML Template" />
+	<meta name="format-detection" content="telephone=no"/>
+	
+	<!-- FAVICONS ICON -->
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+	
+	<!-- PAGE TITLE HERE -->
+	<title>249 Startups</title>
+	
+	<!-- MOBILE SPECIFIC -->
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	
+	<!-- STYLESHEETS -->
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/css/plugins.css}"></link>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/css/style.css}"></link>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/css/template.css}"></link>
+	<link class="skin" rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/css/skin-1.css}"></link>
+	<link rel="stylesheet" th:href="@{/resources/JobBoardTemplate/css/bootstrap-datetimepicker.min.css}"></link>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/css/layers.css}"></link>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/css/settings.css}"></link>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/css/navigation.css}"></link>
+	<!-- STYLESHEETS -->
+</head>
+<body id="bg">
+<div class="page-wraper">
+<div id="loading-area"></div>
+    <!-- header -->
+    <header class="site-header mo-left header fullwidth">
+		<!-- main header -->
+        <div class="sticky-header main-bar-wraper navbar-expand-lg">
+            <div class="main-bar clearfix">
+                <div class="container clearfix">
+                    <!-- website logo -->
+                    <div class="logo-header mostion">
+							
+							<!-- <a><img th:src="@{/resources/JobBoardTemplate/images/orange.jpg}" class="logo" alt=""></img></a> -->
+							<a><img th:src="@{/resources/JobBoardTemplate/images/rsz_1log_2_paint.jpg}" class="logo" alt=""></img></a>
+							<a><img th:src="@{/resources/JobBoardTemplate/images/orange.jpg}" class="logo" alt=""></img></a>
+					</div>
+
+
+                               </div>
+            </div>
+        </div>
+        <!-- main header END -->
+    </header>
+    <!-- header END -->
+    <!-- Content -->
+    <div class="page-content bg-white">
+     <!--  <img th:src="@{/resources/JobBoardTemplate/images/y.jpg}"></img> -->
+
+		<div class="content-block">
+            <div class="section-full bg-white browse-job content-inner-2">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-9 col-lg-8">
+						
+							<ul class="post-job-bx">
+							  <th:span th:each="bean : ${beanList}">
+								<div class="m-b30">
+								<li>
+							<th:span th:if="${role} == 'Guest'">
+								<a th:href= "@{'/TalentController/addTalent'(controllerName=${controllerName})}">
+								
+									<!-- <a th:href= "@{'/'+${controllerName}+'/getSubmittedApplications'(id=${bean.id})}"> -->
+										<div class="d-flex m-b30">
+											<div class="job-post-company">
+											
+											</div>
+											
+											 </div>      
+
+           		<div class="job-post-info">
+           		<!-- <h4 th:text="${bean.__${'NAME'}__}"></h4> --> 
+           		 <!-- th:text="${bean.__${'NAME'}__}" -->
+           		 
+												<ul>
+
+											
+													<li><h4>Orange Corners Sudan 2019 - 2020</h4></li>
+													</ul>
+													
+													<ul><li>Where innovative ideas have room to grow</li>
+													</ul>
+													<ul><li>Apply Now</li>
+	</ul>
+	<ul>
+	<li></li>
+	<li></li>
+	</ul>		
+	<ul>										
+<li> <h4>اورانج كورنرز سودان 2019 - 2020 </h4></li>
+		</ul>										
+		<ul>
+													<li> قدم الان </li>
+			</ul>	
+												
+		</div>			
+		</a>
+		</th:span>							
+	</li></div>	
+	</th:span>																					
+</ul>
+</div>
+</div>
+
+</div>
+
+
+
+
+</div>
+
+
+
+						</div>
+						
+						<div class="col-xl-3 col-lg-4">
+							<div class="sticky-top">
+<!-- <a><img th:src="@{/resources/JobBoardTemplate/images/orange.jpg}" class="logo" alt=""></img></a> -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+    
+
+
+    <!-- Content END-->
+	<!-- Footer -->
+    <footer class="site-footer">
+    </footer>
+    <!-- Footer END -->
+    <button class="scroltop fa fa-chevron-up" ></button>
+
+
+
+<!-- JAVASCRIPT FILES ========================================= -->
+<script th:src="@{/resources/JobBoardTemplate/js/jquery.min.js}"></script><!-- JQUERY.MIN JS -->
+<script th:src="@{/resources/JobBoardTemplate/js/wow.js}"></script><!-- WOW JS -->
+<script th:src="@{/resources/JobBoardTemplate/js/popper.min.js}"></script><!-- BOOTSTRAP.MIN JS -->
+<script th:src="@{/resources/JobBoardTemplate/js/bootstrap.min.js}"></script><!-- BOOTSTRAP.MIN JS -->
+<script th:src="@{/resources/JobBoardTemplate/js/bootstrap-select.min.js}"></script><!-- FORM JS -->
+<script th:src="@{/resources/JobBoardTemplate/js/jquery.bootstrap-touchspin.js}"></script><!-- FORM JS -->
+<!-- <script th:src="@{/resources/JobBoardTemplate/js/magnific-popup.js}"></script> -->
+<!-- MAGNIFIC POPUP JS -->
+<script th:src="@{/resources/JobBoardTemplate/js/waypoints-min.js}"></script><!-- WAYPOINTS JS -->
+<script th:src="@{/resources/JobBoardTemplate/js/counterup.min.js}"></script><!-- COUNTERUP JS -->
+<script th:src="@{/resources/JobBoardTemplate/js/imagesloaded.js}"></script><!-- IMAGESLOADED -->
+<script th:src="@{/resources/JobBoardTemplate/js/masonry-3.1.4.js}"></script><!-- MASONRY -->
+<script th:src="@{/resources/JobBoardTemplate/js/masonry.filter.js}"></script><!-- MASONRY -->
+<script th:src="@{/resources/JobBoardTemplate/js/owl.carousel.js}"></script><!-- OWL SLIDER -->
+<script th:src="@{/resources/JobBoardTemplate/js/rangeslider.js}" ></script><!-- Rangeslider -->
+<script th:src="@{/resources/JobBoardTemplate/js/custom.js}"></script><!-- CUSTOM FUCTIONS  -->
+<script th:src="@{/resources/JobBoardTemplate/js/dz.carousel.js}"></script><!-- SORTCODE FUCTIONS  -->
+<script th:src="@{/resources/JobBoardTemplate/js/dz.ajax.js}"></script><!-- CONTACT JS  -->
+<script th:src="@{/resources/JobBoardTemplate/js/skrollr.min.js}"></script><!-- PAROLLER -->
+
+
+
+</body>
+</html>

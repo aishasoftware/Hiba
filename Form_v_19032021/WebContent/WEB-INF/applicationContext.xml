@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:ehcache="http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring"
+	xmlns:oxm="http://www.springframework.org/schema/oxm"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   		http://www.springframework.org/schema/beans/spring-beans.xsd
+	   		http://www.springframework.org/schema/context
+	   		http://www.springframework.org/schema/context/spring-context.xsd
+			http://www.springframework.org/schema/mvc 
+			http://www.springframework.org/schema/mvc/spring-mvc.xsd
+            http://www.springframework.org/schema/oxm
+            http://www.springframework.org/schema/oxm/spring-oxm-1.5.xsd
+			http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring
+			http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring/ehcache-spring-1.1.xsd">
+
+
+<!-- spring -->
+<!-- <bean id="datasource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="com.mysql.jdbc.Driver" />
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/test" />
+		<property name="user" value="root" />
+		<property name="password" value="123456" />
+		 these are C3P0 properties
+        <property name="minPoolSize" value="3" />
+        <property name="maxPoolSize" value="30" />
+        <property name="maxIdleTimeExcessConnections" value="240" />
+        Test the idle connections every 5 minutes (300)
+        <property name="idleConnectionTestPeriod" value="300" />
+        <property name="preferredTestQuery" value="select 1 from DUAL" />
+	</bean> -->
+	
+	
+<!-- <bean id="permissionEvaluator"     class="org.springframework.security.acls.AclPermissionEvaluator">
+<constructor-arg ref="aclService"/>
+</bean> -->
+<!-- <bean id="aclService"     class="org.springframework.security.acls.jdbc.JdbcMutableAclService">
+<constructor-arg ref="datasource"/>
+<constructor-arg ref="aclCache"/>
+<constructor-arg ref="lookupStrategy"/>
+</bean> -->
+
+<!-- <bean id="lookupStrategy"     class="org.springframework.security.acls.jdbc.BasicLookupStrategy">
+<constructor-arg ref="datasource"/>
+<constructor-arg ref="aclCache"/>
+<constructor-arg ref="aclAuthStrategy"/>
+<constructor-arg>
+<bean class="org.springframework.security.acls.domain.ConsoleAuditLogger"/>
+</constructor-arg>
+</bean> -->
+
+<!-- <bean id="aclAuthStrategy"     class="org.springframework.security.acls.domain.AclAuthorizationStrategyImpl">
+<constructor-arg>
+<list>
+<ref bean="adminRole"/>
+<ref bean="adminRole"/>
+<ref bean="adminRole"/>
+</list>
+</constructor-arg>
+</bean> -->
+
+<!-- <bean id="adminRole"     class="org.springframework.security.core.authority.GrantedAuthorityImpl">
+<constructor-arg value="admin"/>
+</bean> -->
+
+<!-- <bean id="aclCache"     class="org.springframework.security.acls.domain.EhCacheBasedAclCache">
+<constructor-arg>
+<bean class="org.springframework.cache.ehcache.EhCacheFactoryBean" p:cacheName="aclCache">
+<property name="cacheManager">
+<bean class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean"/>
+</property>
+</bean>
+</constructor-arg>
+</bean>
+ --><!-- spring -->
+
+<!-- Controllers -->
+<bean id="applicationController"     class="aisha.controller.ApplicationController" scope="session"/>
+<bean id="talentController"     class="aisha.controller.TalentController" scope="session"/>
+<bean id="systemUser"     class="aisha.security.beans.SystemUser"/>
+<bean id="basicdbAdapter"     class="aisha.security.dao.BasicdbAdapter"/>
+<bean id="utilMethods"     class="aisha.util.utilMethods"/>
+
+<bean id="mailSender"
+		class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="username" value="hellodears249@gmail.com" />
+		<property name="password" value="Aisha@1992" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.from">249Startup</prop>
+				<prop key="mail.smtp.user">hellodears249@gmail.com</prop>
+				<prop key="mail.smtp.password">Aisha@1992</prop>
+				<prop key="mail.smtp.host">smtp.gmail.com</prop>
+				<prop key="mail.smtp.port">25</prop>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="systemUserService"     class="aisha.security.services.SystemUserServiceImpl" />
+	<!-- 	<bean id="connectionService"     class="aisha.service.ConnectionServiceImpl" /> -->
+	<bean id="getFieldAttributes"     class=" aisha.util.FormFields" />
+	<bean id="currentUser"     class=" aisha.util.CurrentUser" />
+	<bean id="systemUserDAO"     class="aisha.security.dao.SystemUserDAOImpl"/>
+	
+	
+	<!-- <bean id="applicationTemp"     class="aisha.bean.ApplicationTemplate"/> -->
+	<bean id="applicationTempDAO"     class="aisha.dao.ApplicationTemplateDAOImpl" />
+	
+	
+<bean id="application"     class="aisha.bean.Application"/>
+	<bean id="applicationDAO"     class="aisha.dao.ApplicationDAOImpl" />
+	<!-- <bean id="applicationService"     class="aisha.service.ApplicationServiceImpl"/> -->
+	
+	
+	<bean id="basicDAO"     class="aisha.dao.BasicDAOImpl" />
+	
+<bean id="talent"     class="aisha.bean.Talent"/>
+	<bean id="talentDAO"     class="aisha.dao.TalentDAOImpl" />
+<!-- 	<bean id="talentService"     class="aisha.service.TalentServiceImpl"/> -->
+
+	<bean id="strategy"     class="aisha.bean.Strategy"/>
+	
+	<bean id="strategyDAO"     class="aisha.dao.StrategyDAOImpl" />
+	<bean id="strategyService"     class="aisha.service.StrategyServiceImpl"/>
+	
+	
+	<!-- 	<bean id="connectionService"     class="aisha.service.ConnectionServiceImpl"/> -->
+	<!-- <bean id="startupProfileservice"     class="aisha.service.StartupProfileServiceImpl" /> -->
+	<bean id="startupDAO"     class="aisha.dao.StartupProfileDAOImpl" />
+	<context:property-placeholder
+		properties-ref="deployProperties" />
+<context:property-placeholder location="classpath:platform.properties" />
+	<!-- Activates various annotations to be detected in bean classes -->
+	<context:annotation-config />
+
+	<!-- Scans the classpath for annotated components that will be auto-registered 
+		as Spring beans. For example @Controller and @Service. Make sure to set the 
+		correct base-package -->
+	<context:component-scan base-package="aisha" />
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	<!-- <mvc:resources mapping="/WebContent/**" location="/WebContent/" /> -->
+	<!-- Configures the annotation-driven Spring MVC Controller programming 
+		model. Note that, with Spring 3.0, this tag works in Servlet MVC only! -->
+	<mvc:annotation-driven />
+	
+<!-- 	<bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
+		<property name="cacheManager" ref="ehcache"/>
+	</bean>
+	<bean id="ehcache" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+		<property name="configLocation" value="classpath:WEB-INF/ehcache.xml"/>
+		<property name="shared" value="true"/>
+	</bean> -->
+	
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>classpath:resources/spring/messages/application_en</value>
+                <value>classpath:resources/spring/messages/talentapplications_en</value>
+                <value>classpath:resources/spring/messages/startup_en</value>
+                <value>classpath:resources/spring/messages/investor_en</value>
+                <value>classpath:resources/spring/messages/talent_en</value>
+                <value>classpath:resources/spring/messages/message_en</value>
+                <value>classpath:resources/spring/messages/platformuser_en</value>
+                <value>classpath:resources/spring/messages/program_en</value>
+                <value>classpath:resources/spring/messages/resource_en</value>
+                <value>classpath:resources/spring/messages/connection_en</value>
+                <value>classpath:resources/spring/messages/complain_en</value>
+                <value>classpath:resources/spring/messages/subscription_en</value>
+                <value>classpath:resources/spring/messages/package_en</value>
+                <value>classpath:resources/spring/messages/event_en</value>
+             </list>
+        </property>
+    </bean>
+	
+<!-- <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>classpath:config/spring/messages/messages</value>
+               
+            </list>
+        </property>
+    </bean> -->
+<!--     <bean id="validationMessageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>classpath:config/spring/webServicesValidationMessages/BillPaymentWS</value>
+
+            </list>
+        </property>
+    </bean> -->
+	
+	<!-- Imports logging configuration <import resource="trace-context.xml"/> -->
+
+
+	<bean id="deployProperties"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean"
+		p:location="/WEB-INF/spring.properties" /> 
+		
+		<import resource="spring-data.xml" />
+			<import resource="security.xml" />
+	<!-- Imports datasource configuration -->
+<!-- 	
+
+	<import resource="spring-batch.xml" /> -->
+<!-- 	<import resource="unitTestingContext.xml" /> -->
+</beans>

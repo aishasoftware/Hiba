@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fields>
+    
+			<field>
+			<name>packageName</name>
+				<nameEng>packageName</nameEng>
+				<nameArb></nameArb>
+				<type>text</type>
+				<useAs>Add,View,Update,Summary</useAs>
+				<boxSize>30</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>all,anonymousUser,Admin</enabledFor>
+				<accessedBy>all,anonymousUser,Admin</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>packageName</saveInField>
+			</field>
+			
+						<field>
+			<name>packageDescription</name>
+				<nameEng>packageDescription</nameEng>
+				<nameArb></nameArb>
+				<type>text</type>
+				<useAs>Add,View,Update,Summary</useAs>
+				<boxSize>30</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>all,anonymousUser,Admin</enabledFor>
+				<accessedBy>all,anonymousUser,Admin</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>packageDescription</saveInField>
+			</field>
+			
+				    <field>
+				<name>creationTime</name>
+				<nameEng>creationTime</nameEng>
+				<nameArb></nameArb>
+				<type>text</type>
+				<useAs>View</useAs>
+				<boxSize>30</boxSize>	
+                <maxLength>30</maxLength>					
+			<enableFor>anonymousUser,all,PlatformAdmin</enableFor>
+				<accessedBy>anonymousUser,all,PlatformAdmin</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>creationTime</saveInField>
+			</field>
+			
+				<field>
+		<name>status</name>
+		<nameEng>status</nameEng>
+		<nameArb></nameArb>
+		<type>select</type>
+		<useAs>View,Update,Summary</useAs>
+		<options>
+			<item>active</item>
+			<item>closed</item>
+		</options>
+		<boxSize>30</boxSize>
+		<maxLength>30</maxLength>
+		<enabledFor>PlatformAdmin</enabledFor>
+		<accessedBy>all,PlatformAdmin,ProfileOwner</accessedBy>
+		<regExpr></regExpr>
+		<required></required>
+		<saveInField>status</saveInField>
+	</field>
+	
+<!-- 			<field>
+			<name>resources</name>
+				<nameEng>resources</nameEng>
+				<List>aisha.bean.Resource</List>
+				<multiple>multiple</multiple>
+				<nameArb></nameArb>
+				<type>select</type>
+				<useAs>Add,View,Update,Summary</useAs>
+				<boxSize>30</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>all,anonymousUser,PlatformAdmin</enabledFor>
+				<accessedBy>all,anonymousUser,PlatformAdmin</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>field3</saveInField>
+			</field>
+			 -->
+				<field>
+			<name>subscribe</name>
+				<nameEng>subscribe</nameEng>
+				<nameArb></nameArb>
+				<type>subscribe</type>
+				<useAs>Add,View,Update,Summary</useAs>
+				<boxSize>30</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>all,anonymousUser,Admin</enabledFor>
+				<accessedBy>all,anonymousUser,Admin</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>subscribe</saveInField>
+			</field>
+			
+</fields>

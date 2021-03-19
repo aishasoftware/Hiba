@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+		<meta name="description" content="JobBoard - HTML Template" />
+	<meta property="og:title" content="JobBoard - HTML Template" />
+	<meta property="og:description" content="JobBoard - HTML Template" />
+	<meta property="og:image" content="JobBoard - HTML Template" />
+	<meta name="format-detection" content="telephone=no"/>
+	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/flatly/bootstrap.min.css"></link>
+    <link rel="stylesheet" th:href="@{/resources/table/styles.css}"></link>
+   <!--  <link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/css/plugins.css}"></link> -->
+    <style>
+    body { background-color: #f7f7f7; }
+    .container { margin: 150px auto; }
+</style>
+</head>
+<body>
+    <div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="https://www.jqueryscript.net/table/Paginate-Sort-Filter-Table-Sortable.html">Download This Plugin</a></li>
+<li><a href="https://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+    <div class="container">
+        <h1>Paginate, Sort, Filter Table Demo</h1>
+        <input type="search" id="search" class="form-control" placeholder="filter"></input>
+        <div id="root"></div>
+        <div class="pages"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script th:src="@{/resources/table/table-sortable.js}"></script>
+   
+   <input id="shishi" type="hidden" text="${myName}"></input>
+ 
+    <script th:src="@{/resources/table/script.js}"></script>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

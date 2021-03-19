@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>HistoricPaper</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+		<meta name="description" content="JobBoard - HTML Template" />
+<!-- 	<meta property="og:title" content="JobBoard - HTML Template" />
+	<meta property="og:description" content="JobBoard - HTML Template" />
+	<meta property="og:image" content="JobBoard - HTML Template" /> -->
+	<meta name="format-detection" content="telephone=no"/>
+	
+	<!-- FAVICONS ICON -->
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/header/plugins_header.css}"></link>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/header/style_header.css}"></link>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/header/template_header.css}"></link>
+	<link class="skin" rel="stylesheet" type="text/css" th:href="@{/resources/header/skin-1.css}"></link>
+ <link rel="stylesheet" th:href="@{/resources/header/bootstrap-datetimepicker.min.css}"></link>
+	<!-- Revolution Slider Css -->
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/header/layers.css}"></link>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/header/settings.css}"></link>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/header/navigation.css}"></link>
+
+<script type="text/javascript" th:src="@{/resources/jsAppForm/cufon-yui.js}"></script>
+<script type="text/javascript" th:src="@{/resources/jsAppForm/js/georgiai.js}"></script>
+<script type="text/javascript" th:src="@{/resources/jsAppForm/js/cuf_run.js}"></script>
+
+
+  <!-- Icons font CSS-->
+    <link th:href="@{/resources/vendorAppForm/mdi-font/css/material-design-iconic-font.min.css}" rel="stylesheet" media="all"></link>
+    <link th:href="@{/resources/vendorAppForm/font-awesome-4.7/css/font-awesome.min.css}" rel="stylesheet" media="all"></link>
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet"></link>
+
+    <!-- Vendor CSS-->
+    <link th:href="@{/resources/vendorAppForm/select2/select2.min.css}" rel="stylesheet" media="all"></link>
+	<link th:href="@{/resources/vendorAppForm/datepicker/daterangepicker.css}" rel="stylesheet" media="all"></link>
+
+	<link th:href="@{/resources/cssAppForm/appFormStyle.css}" rel="stylesheet" type="text/css"></link>
+</head>
+<body>
+
+ <header class="site-header mo-left header fullwidth">
+		<!-- main header -->
+        <div class="sticky-header main-bar-wraper navbar-expand-lg">
+            <div class="main-bar clearfix">
+                <div class="container clearfix">
+                    <!-- website logo -->
+                    <div class="logo-header mostion">
+						<a href="index-2.html"><img src="images/logo.png" class="logo" alt=""></img></a>
+					</div>
+                    <!-- nav toggle button -->
+                    <!-- nav toggle button -->
+                    <button class="navbar-toggler collapsed navicon justify-content-end" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+                    <!-- extra nav -->
+                    <div class="extra-nav">
+                        <div class="extra-cell">
+                            <a href="register.html" class="site-button"><i class="fa fa-user"></i> Sign Up</a>
+                            <a href="login.html" class="site-button"><i class="fa fa-lock"></i> login</a>
+                        </div>
+                    </div>
+                    <!-- Quik search -->
+                    <div class="dez-quik-search bg-primary">
+                        <form action="#">
+                            <input name="search" value="" type="text" class="form-control" placeholder="Type to search"></input>
+                            <span id="quik-search-remove"><i class="flaticon-close"></i></span>
+                        </form>
+                    </div>
+                    <!-- main nav -->
+                    <div class="header-nav navbar-collapse collapse justify-content-start" id="navbarNavDropdown">
+                        <ul class="nav navbar-nav">
+							<li class="active">
+								<a href="#">Home <i class="fa fa-chevron-down"></i></a>
+								<ul class="sub-menu">
+									<li><a href="index-2.html" class="dez-page">Home 1</a></li>
+									<li><a href="index-3.html" class="dez-page">Home 2</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">For Candidates <i class="fa fa-chevron-down"></i></a>
+								<ul class="sub-menu">
+									<li><a href="browse-job.html" class="dez-page">Browse Job</a></li>
+									<li><a href="companies.html" class="dez-page">companies</a></li>
+									<li><a href="job-detail.html" class="dez-page">Job Detail</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">For Employers <i class="fa fa-chevron-down"></i></a>
+								<ul class="sub-menu">
+									<li><a href="browse-candidates.html" class="dez-page">Browse Candidates</a></li>
+									<li><a href="submit-resume.html" class="dez-page">Submit Resume</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Pages <i class="fa fa-chevron-down"></i></a>
+								<ul class="sub-menu">
+									<li><a href="about-us.html" class="dez-page">About Us</a></li>
+									<li><a href="coming-soon.html" class="dez-page">Coming Soon</a></li>
+									<li><a href="error-404.html" class="dez-page">Error 404</a></li>
+									<li><a href="#" class="dez-page">Portfolio</a>
+										<ul class="sub-menu">
+											<li><a href="portfolio-grid-2.html" class="dez-page">Portfolio Grid 2 </a></li>
+											<li><a href="portfolio-grid-3.html" class="dez-page">Portfolio Grid 3 </a></li>
+											<li><a href="portfolio-grid-4.html" class="dez-page">Portfolio Grid 4 </a></li>
+										</ul>
+									</li>
+									<li><a href="login.html" class="dez-page">Login</a></li>
+									<li><a href="register.html" class="dez-page">Register</a></li>
+									<li><a href="contact.html" class="dez-page">Contact Us</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Blog <i class="fa fa-chevron-down"></i></a>
+								<ul class="sub-menu">
+									<li><a href="blog-classic.html" class="dez-page">Classic</a></li>
+									<li><a href="blog-classic-sidebar.html" class="dez-page">Classic Sidebar</a></li>
+									<li><a href="blog-detailed-grid.html" class="dez-page">Detailed Grid</a></li>
+									<li><a href="blog-detailed-grid-sidebar.html" class="dez-page">Detailed Grid Sidebar</a></li>
+									<li><a href="blog-left-img.html" class="dez-page">Left Image Sidebar</a></li>
+									<li><a href="blog-details.html" class="dez-page">Blog Details</a></li>
+								</ul>
+							</li>
+						</ul>			
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main header END -->
+    </header>
+<!-- START PAGE SOURCE -->
+<div class="main">
+
+  <div class="header">
+    <div class="header_resize">
+      <div class="logo">
+        <h1><a href="index.html">HistoricPaper<br />
+          <small>Best and necessary.</small></a></h1>
+      </div>
+      <div class="search">
+
+      </div>
+      <div class="clr"></div>
+      <div class="menu">
+        <ul>
+          <li><a href="index.html" class="active"><span>Home</span></a></li>
+          <li><a href="services.html"><span>Services</span></a></li>
+          <li><a href="about.html"><span>About Us</span></a></li>
+          <li><a href="contact.html"><span>Contact Us</span></a></li>
+        </ul>
+      </div>
+      <div class="clr"></div>
+      <div class="logoimg">
+        <h2>You can find more of my free template designs at my website.<br />
+          For premium commercial designs, you can check out<br />
+          <span>MyWebsite.com.</span></h2>
+      </div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="body_resize">
+<!--     <img th:src="@{/resources/images/img_1.jpg}" alt="" width="84" height="90" />
+	<h2>249 Program Application<br />
+          <span><a href="#">Deadline 25 July 2019 </a></span> </h2>
+        <div class="bg"></div>
+        <p>To all talents across the country do not miss this great opportunity</p> -->
+	<div class="card-body">
+	
+			<div class="org_container">
+			<div class="row">
+
+				<div class="col-md-4 col-sm-4">
+					<div class="service-box-wrap">
+						<div class="service-icon-wrap">
+							<i class="fa fa-umbrella fa-2x"></i>
+						</div> <!-- /.service-icon-wrap -->
+						<div class="service-cnt-wrap">
+							<h3 class="service-title">Easy Theme Colors</h3>
+							<p>There are 4 color themes (blue, green, red, orange) and this one is orange.</p>
+						</div> <!-- /.service-cnt-wrap -->
+					</div> <!-- /.service-box-wrap -->
+				</div> <!-- /.col-md-4 -->
+
+				<div class="col-md-4 col-sm-4">
+					<div class="service-box-wrap">
+						<div class="service-icon-wrap">
+							<i class="fa fa-mobile-phone fa-2x"></i>
+						</div> <!-- /.service-icon-wrap -->
+						<div class="service-cnt-wrap">
+							<h3 class="service-title">Change Icons</h3>
+							<p>Check <a rel="nofollow" href="http://fontawesome.io/icons/" target="_blank">FontAwesome</a> for your suitable icons. Example: &lt;i class=&quot;fa fa-download&quot;&gt;&lt;/i&gt;</p>
+						</div> <!-- /.service-cnt-wrap -->
+					</div> <!-- /.service-box-wrap -->
+				</div> <!-- /.col-md-4 -->
+
+				<div class="col-md-4 col-sm-4">
+					<div class="service-box-wrap">
+						<div class="service-icon-wrap">
+							<i class="fa fa-pencil-square-o fa-2x"></i>
+						</div> <!-- /.service-icon-wrap -->
+						<div class="service-cnt-wrap">
+						
+						<a class="service-title" href="/Form_v_1.0/TalentController/viewTalentDetailsForm/">Pixel Perfect Design</a>
+							<p>Based on a 12 column grid system, with every pixel snapped.</p>
+							
+						</div> <!-- /.service-cnt-wrap -->
+					</div> <!-- /.service-box-wrap -->
+				</div> <!-- /.col-md-4 -->
+
+			</div>
+
+		</div> <!-- /.container -->
+	
+<section class="light-content services">
+</section>
+
+             
+                </div>
+						
+      <div class="right">
+
+
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+ <!--  <div class="FBG_resize"><img src="/resources/images/search_img.gif" alt="" width="931" height="20" /></div> -->
+
+  <div class="footer">
+    <div class="footer_resize">
+      <p class="lf">Copyright &copy; 2010 <a href="#">SiteName</a> - All Rights Reserved</p>
+      <p class="rf">Design by <a href="http://www.hotwebsitetemplates.net">Hot Website Templates</a></p>
+      <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+  </div>
+  
+  
+    <div class="footer">
+    <div class="footer_resize">
+      <p class="lf">Copyright &copy; 2010 <a href="#">SiteName</a> - All Rights Reserved</p>
+      <p class="rf">Design by <a href="http://www.hotwebsitetemplates.net">Hot Website Templates</a></p>
+      <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+  </div>
+  
+</div>
+
+    <!-- Jquery JS-->
+    <script src="@{/resources/vendorAppForm/jquery/jquery.min.js}"></script>
+    <!-- Vendor JS-->
+    <script th:src="@{/resources/vendorAppForm/select2/select2.min.js}"></script>
+	    <script th:src="@{/resources/vendorAppForm/datepicker/daterangepicker.js}"></script>
+		<script th:src="@{/resources/vendorAppForm/datepicker/moment.min.js}"></script>
+  
+    <!-- Main JS-->
+    <script src="@{/resources/jsAppForm/global.js}"></script>
+<!-- END PAGE SOURCE -->
+
+
+<!-- header js -->
+<script src="js/jquery.min.js"></script><!-- JQUERY.MIN JS -->
+<script src="@{/resources/header/js/wow.js}"></script><!-- WOW JS -->
+<script src="@{/resources/header/js/popper.min.js}"></script><!-- BOOTSTRAP.MIN JS -->
+<script src="@{/resources/header/js/bootstrap.min.js}"></script><!-- BOOTSTRAP.MIN JS -->
+<script src="@{/resources/header/js/bootstrap-select.min.js}"></script><!-- FORM JS -->
+<script src="@{/resources/header/js/jquery.bootstrap-touchspin.js}"></script><!-- FORM JS -->
+<script src="@{/resources/header/js/magnific-popup.js}"></script><!-- MAGNIFIC POPUP JS -->
+<script src="@{/resources/header/js/waypoints-min.js}"></script><!-- WAYPOINTS JS -->
+<script src="@{/resources/header/js/counterup.min.js}"></script><!-- COUNTERUP JS -->
+<script src="@{/resources/header/js/imagesloaded.js}"></script><!-- IMAGESLOADED -->
+<script src="@{/resources/header/js/masonry-3.1.4.js}"></script><!-- MASONRY -->
+<script src="@{/resources/header/js/masonry.filter.js}"></script><!-- MASONRY -->
+<script src="@{/resources/header/js/owl.carousel.js}"></script><!-- OWL SLIDER -->
+<script src="@{/resources/header/js/rangeslider.js}" ></script><!-- Rangeslider -->
+<script src="js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
+<script src="@{/resources/header/js/dz.carousel.js}"></script><!-- SORTCODE FUCTIONS  -->
+<script src="@{/resources/header/js/recaptcha/api.js}"></script> <!-- Google API For Recaptcha  -->
+<script src="@{/resources/header/js/dz.ajax.js}"></script><!-- CONTACT JS  -->
+<script src="@{/resources/header/js/skrollr.min.js}"></script><!-- PAROLLER -->
+<!-- Go to www.addthis.com/dashboard to customize your tools --> 
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Paginatejs | Ligne</title>
+    <link rel="stylesheet" th:href="@{/resources/table/paginate.css}"></link>
+    <link rel="stylesheet" th:href="@{/resources/table/ligne.css}"></link>
+    <script type="text/javascript" th:src="@{/resources/table/paginate.js}"></script>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+<!-- <div class="container"> -->
+    <div>
+        <h1>Ligne Paginatejs</h1>
+    </div>
+    <div class="panel">
+        <div class="body">
+            <div class="input-group">
+                <label for="searchBox">Filtrar</label>
+                <input type="search" id="searchBox" placeholder="Filtrar..."></input>
+            </div>
+        </div>
+    </div>
+    <table class="myTable table hover">
+        <tbody>
+        <tr>
+            <th>USER ID</th>
+            <th>ID</th>
+            <th>TITTLE</th>
+            <th>COMPLETED</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>delectus aut autem</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>quis ut nam facilis et officia qui</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>3</td>
+            <td>fugiat veniam minus</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>4</td>
+            <td>et porro tempora</td>
+            <td></td>
+        </tr>
+        
+                <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>quis ut nam facilis et officia qui</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>3</td>
+            <td>fugiat veniam minus</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>4</td>
+            <td>et porro tempora</td>
+            <td></td>
+        </tr>
+               </tbody>
+    </table>
+<!-- </div> -->
+<script>
+
+    let options = {
+        numberPerPage:5, //Cantidad de datos por pagina
+        goBar:true, //Barra donde puedes digitar el numero de la pagina al que quiere ir
+        pageCounter:true, //Contador de paginas, en cual estas, de cuantas paginas
+    };
+
+    let filterOptions = {
+        el:'#searchBox' //Caja de texto para filtrar, puede ser una clase o un ID
+    };
+
+    paginate.init('.myTable',options,filterOptions);
+</script>
+</body>
+</html>

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+		<meta name="description" content="JobBoard - HTML Template" />
+	<meta property="og:title" content="JobBoard - HTML Template" />
+	<meta property="og:description" content="JobBoard - HTML Template" />
+	<meta property="og:image" content="JobBoard - HTML Template" />
+	<meta name="format-detection" content="telephone=no"/>
+	
+	<!-- FAVICONS ICON -->
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+	
+	<!-- PAGE TITLE HERE -->
+	<title>249 Platform</title>
+	
+	<!-- MOBILE SPECIFIC -->
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	
+	<!-- STYLESHEETS -->
+	<!-- <fixed table header> -->
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/Table_Fixed_Header/css/main.css}"></link>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/Table_Fixed_Header/css/util.css}"></link>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/Table_Fixed_Header/css/main.css}"></link>
+	<!-- <fixed table header> -->
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/css/plugins.css}"></link>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/css/style.css}"></link>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/css/template.css}"></link>
+	<link class="skin" rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/css/skin-1.css}"></link>
+	<link rel="stylesheet" th:href="@{/resources/JobBoardTemplate/css/bootstrap-datetimepicker.min.css}"></link>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/css/layers.css}"></link>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/css/settings.css}"></link>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/css/navigation.css}"></link>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/plugins/themify-icons.css}"></link>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/css/search.css}"></link>
+	<!-- STYLESHEETS -->
+</head>
+<body id="bg">
+<div id="loading-area"></div>
+<div class="page-wraper">
+	<!-- header -->
+    <header class="site-header mo-left header fullwidth">
+		<!-- main header -->
+        <div class="sticky-header main-bar-wraper navbar-expand-lg">
+            <div class="main-bar clearfix">
+                <div class="container clearfix">
+                    <!-- website logo -->
+                    <div class="logo-header mostion">
+						<a><img th:src="@{/resources/JobBoardTemplate/images/rsz_1log_2_paint.jpg}"></img></a>
+					
+					</div>
+                    <!-- nav toggle button -->
+                    <!-- nav toggle button -->
+                    <button class="navbar-toggler collapsed navicon justify-content-end" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+
+                    <!-- Quik search -->
+<!--                     <div class="dez-quik-search bg-primary">
+                        <form action="#">
+                            <input name="search" value="" type="text" class="form-control" placeholder="Type to search"></input>
+                            <span id="quik-search-remove"><i class="flaticon-close"></i></span>
+                        </form>
+                    </div> -->
+                    <!-- main nav -->
+                     <div class="header-nav navbar-collapse collapse justify-content-start" id="navbarNavDropdown">
+                        <ul class="nav navbar-nav">
+					<li>
+								<a href="/Form_v_1.0/">Home</a>
+							</li> 
+							
+					<li>
+								<a>Programs</a>
+				<ul class="sub-menu">
+						<!-- 		  	<th:span th:if="${role}!='anonymousUser'"> 
+				  	 <li><a th:href="'/Form_v_1.0/InvestorController/addProgram'" class="dez-page">Add Program</a></li>
+				  	 </th:span> -->
+								    <li><a th:href="'/Form_v_1.0/InvestorController/getProgramList'" class="dez-page">View Programs</a></li>
+								</ul>
+							</li>
+
+					<li>
+								<a>Subscription</a>
+				<ul class="sub-menu">
+						<!-- 		  	<th:span th:if="${role}!='anonymousUser'"> 
+				  	 <li><a th:href="'/Form_v_1.0/InvestorController/addProgram'" class="dez-page">Add Program</a></li>
+				  	 </th:span> -->
+								    <li>
+								    <th:span th:if="${userType}=='Admin'">
+								    <a th:href="'/Form_v_1.0/SubscriptionController/getPackageList'" class="dez-page">View Packages</a>
+								    <a th:href="'/Form_v_1.0/SubscriptionController/getPackageList'" class="dez-page">Add Package</a>
+								    </th:span>
+								    
+								    <th:span th:if="${userType}!='Admin'">
+								    <a th:href="'/Form_v_1.0/SubscriptionController/getPackageList'" class="dez-page">View Packages</a>
+								    </th:span>
+								    </li>
+								</ul>
+							</li>
+									
+				<li>
+					
+								<a>Platform</a>
+				<ul class="sub-menu">
+					
+						    <li>
+
+								     <th:span th:if="${role}=='PlatformAdmin'">
+								 <!--  <li><a th:href="'/Form_v_1.0/PlatformUserController/addPlatformUser'" class="dez-page">Create Admin</a></li> -->
+								  <li><a th:href="'/Form_v_1.0/PlatformUserController/getPlatformUserList'" class="dez-page">View Users</a></li>
+								    <li><a th:href="'/Form_v_1.0/TalentController/getTalentList'" class="dez-page">View Talents</a></li>
+								  
+							  </th:span>	
+							</li>
+
+							
+							</ul>
+							
+							</li>
+							
+					<li>
+								<a th:href="'/Form_v_1.0/TalentController/addTalent'">Sign-Up</a>
+
+							</li>	
+						<li>
+							<a th:href="'/Form_v_1.0/login'">Login</a>
+						</li>
+							
+
+													</ul>			
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- main header END -->
+    </header>
+    <!-- header END -->
+    <!-- Content -->
+    <div class="page-content bg-white">
+    
+
+		<div class="content-block">
+            <div class="section-full bg-white browse-job content-inner-2">
+				<div class="container">
+				
+						<th:span th:each="message : ${messages}">
+							<h5 class="font-weight-600" th:text="${message}"></h5>
+							</th:span>
+							
+				    <div>
+				 
+    <form th:action="@{'get'+${beanName}+'List'}">
+     <input name="id" type="hidden" th:value="${progId}"/> 
+
+        <th:span th:if="${beanName} == 'Package' and ${userType} == 'Admin'">
+                <div class="inner-form">
+                 <div class="input-field third-wrap">
+            <div class="icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"></path>
+              </svg>
+            </div>
+		
+		                    
+            <input id="search" type="text" placeholder="Name" name="packageName"></input>
+            
+          </div>
+
+            
+         <div class="input-field third-wrap">
+            <div class="icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"></path>
+              </svg>
+            </div>
+		
+		 <input name="fromCreate" type="date" class="datepicker" id="depart" placeholder=""></input>
+          </div>
+          <div class="input-field fourth-wrap">
+            <div class="icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"></path>
+              </svg>
+            </div>
+       		<!-- <input name="toCreate" type="date" placeholder="Insert End Date"></input> -->
+       		     <input name="toCreate" type="date" class="datepicker" id="return" placeholder=""></input>
+          </div>
+          <div class="input-field fifth-wrap">
+            <button type="submit" class="btn-search" id="btnContactUs">Search</button>
+          </div>
+
+        </div>
+             </th:span>
+      </form>
+    </div>
+				
+							<div class="row">
+	
+								<div class="col-lg-12">
+								   
+							<div class="job-info-box">
+							
+							<th:span th:if = "${beanName} == 'PlatformUser' and ${view} == 'yes'" >
+							<h6 th:style="'color: purple;'"><a th:href="'/Form_v_1.0/PlatformUserController/addPlatformUser'" th:text="'Add User'"></a></h6>
+							</th:span>
+							
+								<th:span th:each="message : ${tableMessages}">
+							<h6 th:style="'color: purple;'" th:text="${message}"></h6>
+							</th:span>
+			
+				<div class="table100 ver1 m-b-110">
+					<div class="table100-head">				
+							<table>
+							
+        <tbody>
+        <thead>
+        <tr class="row100 head">
+     
+                <th:span th:each="field : ${tableFields}">
+<th:span th:if="${field.name} == 'innerName' and ${role} == 'StartupAdmin' ">               
+            <th class="cell100 column1" th:text="#{${beanName}+'.'+${field.name}+'.title'}"></th>
+</th:span>
+
+<th:span th:if="${field.name} == 'outerName' and ${role} == 'InvestorAdmin' ">               
+            <th class="cell100 column1" th:text="#{${beanName}+'.'+${field.name}+'.title'}"></th>
+</th:span>
+ 									
+<th:span th:if="${field.name} != 'outerName' and ${field.name} != 'innerName' and ${field.name} != 'connect'">               
+            <th class="cell100 column1" th:text="#{${beanName}+'.'+${field.name}+'.title'}"></th>
+</th:span>
+
+<th:span th:if="${field.name} == 'connect'">               
+            <th class="cell100 column1"></th>
+
+  </th:span>
+
+        </tr>
+            </thead>  
+            </tbody>
+            </table>
+            </div>
+            
+            	<div class="table100-body js-pscroll">
+            	<table>
+							<tbody>
+        <th:span th:each="bean : ${beanList}"> 
+ <tr class="row100 body">
+          
+                	<th:span th:each="field : ${tableFields}">
+                	  <th:span th:if="(${beanName}=='Investor' or ${beanName}=='Startup' or ${beanName}=='Talent' or ${beanName}=='Resource' or ${beanName}=='Package' or ${beanName} == 'Subscription') and (${field.name} != 'packUserId' and ${field.name} != 'status' and ${field.name} != 'field1' and ${field.name} != 'packageName' and ${field.name} != 'applicantId' and ${field.name} != 'connect')">	
+                	       <td th:text="${bean.__${field.name}__}" />
+                </th:span>
+                
+  	  <th:span th:if="${beanName}=='Application' and ${field.name} == 'progName'">
+                <td> <span>
+ 										<a th:href="'/Form_v_1.0/InvestorController/getProgram'+'?'+'id='+${bean.app_Id}" th:text="${bean.__${field.name}__}"></a>
+ 									</span>  </td>
+ 									  
+ </th:span>
+      <th:span th:if="(${beanName}=='Investor' or ${beanName}=='Startup' or ${beanName}=='Talent') and ${field.name} == 'field1'">	
+                	      <td> <span>
+ 										<a th:href="'/Form_v_1.0/'+${controllerName}+'/get'+${beanName}+'?'+'id='+${bean.id}" th:text="${bean.__${field.name}__}"></a>
+ 									</span>  </td>
+                </th:span> 
+
+
+  	  <th:span th:if="${beanName}=='Subscription' and ${field.name} == 'packUserId'">
+            	      <td> <span>
+ 										<a th:href="'/Form_v_1.0/PlatformUserController'+'/getPlatformUser'+'?'+'id='+${bean.packUserId}" th:text="${bean.__${field.name}__}"></a>
+ 									</span>  </td>
+ 									  
+ </th:span>
+ 
+  <th:span th:if="${beanName}=='Subscription' and ${field.name} == 'status' and ${bean.__${field.name}__} == 'pending'">
+            	      <td> <span>
+ 										<a th:href="'/Form_v_1.0/'+${controllerName}+'/submitUpdateSubscription'+'?'+'id='+${bean.id}" th:text="Approve"></a>
+ 									</span>  </td>
+ 									  
+ </th:span>
+ 
+ 
+  	  <th:span th:if="${beanName}=='Package' and ${field.name} == 'packageName'">
+            	      <td> <span>
+ 										<a th:href="'/Form_v_1.0/'+${controllerName}+'/get'+${beanName}+'?'+'id='+${bean.id}" th:text="${bean.__${field.name}__}"></a>
+ 									</span>  </td>
+ 									  
+ </th:span>
+ 
+    <th:span th:if="${beanName}=='Package' and ${subscribe}=='yes'">	
+         <td> <span>
+ 										<a th:href="'/Form_v_1.0/'+${controllerName}+'/submitAddSubscription'+'?'+'id='+${bean.id}" th:text="'Subscribe'"></a>
+ 									</span>  </td>
+    </th:span>
+                     <th:span th:if="${field.name}=='connect'">		
+  <!--    and ${connect} == 'yes' -->
+              
+ 							
+ <th:span th:if="(${myConnections} == null or ${myConnections.empty} == 'true') and ${role} == 'InvestorAdmin' and ${beanName} == 'Startup'">
+ 								   <td> <span>	<a th:href="'/Form_v_1.0/' + ${beanName} + 'Controller/connect?id='+${bean.id}" th:text="'Follow'"></a>
+ 									</span>
+ 									</td>
+ 									</th:span>
+<!-- 
+ 								<th:span th:if = "(${myConnections} != null) and ${#maps.containsKey(myConnections , #strings.toString(bean.id) ) == false} and (${role} == 'InvestorAdmin' and ${beanName} == 'Startup') or (${role} == 'StartupAdmin' and ${beanName} == 'Talent')">
+ 									   <td> <span>
+ 									   <a th:href="'/Form_v_1.0/' + ${beanName} + 'Controller/connect?id='+${bean.id}+','+${bean.field1}" th:text="'Follow'"></a>
+ 									</span>
+ 									</td>
+ 									</th:span> -->
+ 									 									
+ 								<th:span th:each = "connection : ${myConnections}">
+ 									
+ 										<th:span th:if = "${connection.key} == ${bean.id} and ${connection.value} == 'pending'">
+ 									
+ 										   <td> <span><a th:text="'Requested'"></a>
+ 										</span>
+ 										</td>
+ 										</th:span>
+ 									
+ 									<th:span th:if = "${connection.key} == ${bean.id} and ${connection.value} == 'active'">
+ 									
+ 										   <td> <span><a th:text="'Followed'"></a>
+ 										</span>
+ 										</td>
+ 										</th:span>
+ 										     
+ 										</th:span>
+ 									
+</th:span>
+  
+                  <th:span th:if="${field.name}=='userName' and ${beanName}=='PlatformUser'">
+                <td> <span>
+ 										<a th:href="'/Form_v_1.0/'+${controllerName}+'/get'+${beanName}+'?'+'id='+${bean.id}" th:text="${bean.__${field.name}__}"></a>
+ 									</span>  </td>
+ </th:span>
+ 
+       <th:span th:if="${field.name}!='userName' and ${beanName}=='PlatformUser'">
+                 <td th:text="${bean.__${field.name}__}" />
+ </th:span>
+ 
+                 	  <th:span th:if="${innerBean}=='Application' and ${field.name} != 'progName'">
+
+ 									     <td th:text="${bean.__${field.name}__}" />
+ </th:span>
+                          <th:span th:if="${field.name}=='programName' and ${beanName}=='Program'">
+               <td th:text="${bean.__${field.name}__}" />
+                <!--    <td> <span>
+ 										<a th:href="'/Form_v_1.0/'+${controllerName}+'/get'+${beanName}+'?'+'id='+${bean.id}" th:text="${bean.__${field.name}__}"></a>
+ 									</span>  </td> -->
+ </th:span>
+ 
+  <th:span th:if="${field.name}=='investorName' and ${beanName}=='Program'">
+                <td> <span>
+ 										<a th:href="'/Form_v_1.0/'+${controllerName}+'/getInvestor'+'?'+'id='+${bean.investorId}" th:text="${bean.__${field.name}__}"></a>
+ 									</span>  </td>
+ </th:span>
+ 					
+   <th:span th:if="${beanName} == 'Connection' and ${field.name} == 'innerId'">
+  	  <td> <span>
+  	  <a th:href="'/Form_v_1.0/TalentController/getTalent?'+'id='+${bean.innerId}" th:text="'View Talent'"></a>
+  </span>
+  </td>
+	</th:span>
+
+<!--    <th:span th:if="${beanName} == 'Application' and ${field.name} == 'applicantId'">
+  	  <td> <span>
+  	  <a th:href="'/Form_v_1.0/TalentController/getTalent?'+'id='+${bean.applicantId}" th:text="'View Talent'"></a>
+  </span>
+  </td>
+	</th:span> -->
+		
+	  <th:span th:if="${beanName} == 'Connection' and ${field.name} == 'innerName' and ${role} == 'StartupAdmin' ">
+ <td> <span>
+ <a th:href="'/Form_v_1.0/InvestorController/getInvestor?'+'id='+${bean.innerId}" th:text="${bean.__${field.name}__}"></a>
+ 	</span>  </td>
+	</th:span>
+	
+		  <th:span th:if="${beanName} == 'Connection' and ${field.name} == 'outerName' and ${role} == 'InvestorAdmin' ">
+<!-- <td th:text="${bean.__${field.name}__}" /> -->
+
+ <td> <span>
+ <a th:href="'/Form_v_1.0/StartupController/getStartup?'+'id='+${bean.outerId}" th:text="${bean.__${field.name}__}"></a>
+ 	</span>  </td>
+	</th:span>
+	
+                <th:span th:if="${field.name}=='field1' and ${beanName}!='PlatformUser' and ${operation} == 'ListTalents'">
+                <td> <span>
+ 										<a th:href="'/Form_v_1.0/'+${controllerName}+'/get'+${beanName}+'?'+'id='+${bean.id}" th:text="${bean.__${field.name}__}"></a>
+ 									</span>  </td>
+ </th:span>
+ 	  <th:span th:if="${field.name}=='programName' and ${field.name}=='investorId' and ${field.name}!='field1' and ${field.name}!='connect' and ${beanName}!='PlatformUser' and ${beanName}!='Connection'">								
+     <td th:text="${bean.__${field.name}__}" />
+    
+</th:span>
+ 									    <th:span th:if="${beanName}=='Connection' and ${field.name} != 'innerId' and ${field.name} != 'innerName' and ${field.name} != 'outerId' and ${field.name} != 'outerName'">								
+     	   <form th:action="'/Form_v_1.0/'+${controllerName}+'/submitUpdateConnection?id='+${bean.id}" method="post" th:object="${newBean}">
+ 								    
+ 	<!-- 				<th:span th:if="${field.name}=='connectionName'">		
+ 					<td>	
+ 							<a th:href="'/Form_v_1.0/'+${bean.relationType}+'Controller/get'+${bean.relationType}+'?'+'id='+${bean.innerId}" th:text="${bean.__${field.name}__}"></a>
+     </td>
+     </th:span> -->
+      
+    <th:span th:if="${field.name}!='accept' and ${field.name} != 'applicantId'">		
+    <td th:text="${bean.__${field.name}__}" />
+</th:span>
+
+	 <th:span th:if="${field.name}=='accept' and ${role} == 'StartupAdmin' and ${bean.status} == 'pending'">		
+ 									  <td> <button type="submit" class="btn-search" id="btnContactUs">Accept</button>
+     </td>
+     </th:span>
+
+     </form>
+</th:span>
+
+
+ 									  </th:span>
+ 									  
+ 									    <th:span th:if="${operation} == 'ListTalents'">
+  	  <td> <span>
+  	  <a th:href="'/Form_v_1.0/StartupController/submitAddPlatformUser?'+'id='+${bean.innerId}" th:text="'Add Talent'"></a>
+  </span>
+  </td>
+	</th:span>
+ 		
+ 		 <th:span th:if="${beanName}=='Program' and (${userType} == 'Investor' or ${userType} == 'Platform')">
+                <td> <span>
+ 										<a th:href="'/Form_v_1.0/'+${controllerName}+'/getApplicationList'+'?'+'id='+${bean.id}" th:text="'Submissions'"></a>
+ 									</span>  </td>
+ </th:span>
+ 						
+ 	  <th:span th:if="${innerBean}=='Application' and (${role} == 'PlatformAdmin' or ${role} == 'Reviewer' or ${role} == 'InvestorAdmin')">
+                <td> <span>
+ 										<a th:href="'/Form_v_1.0/InvestorController/getApplication'+'?'+'id='+${bean.id} + ' ' +${bean.app_Id}" th:text="'View Form'"></a>
+ 									</span>  </td>
+ 									  
+ </th:span>
+ 
+   <th:span th:if="${innerBean}=='Application' and (${role} == 'Evaluator' or ${role} == 'Interviewer')">
+                <td> <span>
+ 										<a th:href="'/Form_v_1.0/InvestorController/evaluate'+'?'+'id='+${bean.id} + ' ' +${bean.app_Id}" th:text="'Evaluate'"></a>
+ 									</span>  </td>
+ 									  
+ </th:span>
+ 	
+ 	  <th:span th:if="${beanName}=='Program' and ${userType} != 'Investor' and ${userType} !='Platform'">
+                <td> <span>
+ 										<a th:href="'/Form_v_1.0/'+${controllerName}+'/getApplicationForm'+'?'+'id='+${bean.id}" th:text="'Apply'"></a>
+ 									</span>  </td>
+ </th:span>	
+  
+		  
+                   <th:span th:if="${beanName}=='Complain'">
+                <td> <span>
+ 										<a th:href="'/Form_v_1.0/'+${controllerName}+'/getComplain'+'?'+'id='+${bean.id}" th:text="'View'"></a>
+ 									</span>  </td>
+ </th:span>	
+
+
+ </tr>
+
+        </th:span>
+        </tbody>
+  
+    </table>
+</div>
+</div>
+
+						
+	<ul>
+		 
+								<li>       
+     <div th:replace="generic :: platform-pager">
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	     
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     </li>
+     
+							</ul>
+
+						</div>
+				
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+</div>
+    
+    <!-- Content END-->
+	<!-- Footer -->
+    <footer class="site-footer">
+
+    </footer>
+    <!-- Footer END -->
+    <button class="scroltop fa fa-chevron-up" ></button>
+</div>
+
+
+<!-- JAVASCRIPT FILES ========================================= -->
+<script th:src="@{/resources/JobBoardTemplate/js/jquery.min.js}"></script><!-- JQUERY.MIN JS -->
+<script th:src="@{/resources/JobBoardTemplate/js/wow.js}"></script><!-- WOW JS -->
+<script th:src="@{/resources/JobBoardTemplate/js/popper.min.js}"></script><!-- BOOTSTRAP.MIN JS -->
+<script th:src="@{/resources/JobBoardTemplate/js/bootstrap.min.js}"></script><!-- BOOTSTRAP.MIN JS -->
+<script th:src="@{/resources/JobBoardTemplate/js/bootstrap-select.min.js}"></script><!-- FORM JS -->
+<script th:src="@{/resources/JobBoardTemplate/js/jquery.bootstrap-touchspin.js}"></script><!-- FORM JS -->
+<!-- <script th:src="@{/resources/JobBoardTemplate/js/magnific-popup.js}"></script>MAGNIFIC POPUP JS -->
+<script th:src="@{/resources/JobBoardTemplate/js/waypoints-min.js}"></script><!-- WAYPOINTS JS -->
+<script th:src="@{/resources/JobBoardTemplate/js/counterup.min.js}"></script><!-- COUNTERUP JS -->
+<script th:src="@{/resources/JobBoardTemplate/js/imagesloaded.js}"></script><!-- IMAGESLOADED -->
+<script th:src="@{/resources/JobBoardTemplate/js/masonry-3.1.4.js}"></script><!-- MASONRY -->
+<script th:src="@{/resources/JobBoardTemplate/js/masonry.filter.js}"></script><!-- MASONRY -->
+<script th:src="@{/resources/JobBoardTemplate/js/owl.carousel.js}"></script><!-- OWL SLIDER -->
+<script th:src="@{/resources/JobBoardTemplate/js/rangeslider.js}" ></script><!-- Rangeslider -->
+<script th:src="@{/resources/JobBoardTemplate/js/custom.js}"></script><!-- CUSTOM FUCTIONS  -->
+<script th:src="@{/resources/JobBoardTemplate/js/dz.carousel.js}"></script><!-- SORTCODE FUCTIONS  -->
+<script th:src="@{/resources/JobBoardTemplate/js/dz.ajax.js}"></script><!-- CONTACT JS  -->
+<script th:src="@{/resources/JobBoardTemplate/js/skrollr.min.js}"></script><!-- PAROLLER -->
+
+
+
+    <script src="@{/resources/JobBoardTemplate/search/choices.js"></script>
+    <script src="@{/resources/JobBoardTemplate/search/flatpickr.js"></script>
+    <script>
+      flatpickr(".datepicker",
+      {});
+
+    </script>
+    <script>
+      const choices = new Choices('[data-trigger]',
+      {
+        searchEnabled: false,
+        itemSelectText: '',
+      });
+
+    </script>
+
+</body>
+
+
+</html>

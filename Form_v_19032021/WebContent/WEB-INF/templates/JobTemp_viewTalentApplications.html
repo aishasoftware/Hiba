@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+		<meta name="description" content="JobBoard - HTML Template" />
+	<meta property="og:title" content="JobBoard - HTML Template" />
+	<meta property="og:description" content="JobBoard - HTML Template" />
+	<meta property="og:image" content="JobBoard - HTML Template" />
+	<meta name="format-detection" content="telephone=no"/>
+	
+	<!-- FAVICONS ICON -->
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+	
+	<!-- PAGE TITLE HERE -->
+	<title>249 Platform</title>
+	
+	<!-- MOBILE SPECIFIC -->
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	
+	<!-- STYLESHEETS -->
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/css/plugins.css}"></link>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/css/style.css}"></link>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/css/template.css}"></link>
+	<link class="skin" rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/css/skin-1.css}"></link>
+	<link rel="stylesheet" th:href="@{/resources/JobBoardTemplate/css/bootstrap-datetimepicker.min.css}"></link>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/css/layers.css}"></link>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/css/settings.css}"></link>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/css/navigation.css}"></link>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/JobBoardTemplate/css/paginate-style.css}"></link>
+	<!-- STYLESHEETS -->
+</head>
+<body id="bg">
+<div class="page-wraper">
+<div id="loading-area"></div>
+    <!-- header -->
+    <header class="site-header mo-left header fullwidth">
+		<!-- main header -->
+        <div class="sticky-header main-bar-wraper navbar-expand-lg">
+            <div class="main-bar clearfix">
+                <div class="container clearfix">
+                    <!-- website logo -->
+                    <div class="logo-header mostion">
+							<a><img th:src="@{/resources/JobBoardTemplate/images/rsz_1log_2_paint.jpg}" class="logo" alt=""></img></a>
+					</div>
+                    <!-- nav toggle button -->
+                    <!-- nav toggle button -->
+                    <button class="navbar-toggler collapsed navicon justify-content-end" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+
+                    <!-- Quik search -->
+                    <div class="dez-quik-search bg-primary">
+                        <form action="#">
+                            <input name="search" value="" type="text" class="form-control" placeholder="Type to search"></input>
+                            <span id="quik-search-remove"><i class="flaticon-close"></i></span>
+                        </form>
+                    </div>
+                    <!-- main nav -->
+                   <!--  <div class="header-nav navbar-collapse collapse justify-content-start" id="navbarNavDropdown">			
+                    <ul class="nav navbar-nav">
+							<li>
+								<a href="#">Home</a>
+ sub menu will appear here
+							</li>
+							<li>
+								<a href="#">Investors</a>
+ sub menu will appear here
+							</li>
+							<li>
+								<a href="#">Startups</a>
+ sub menu will appear here
+							</li>
+							<li>
+								<a href="#">Talents</a>
+ sub menu will appear here
+							</li>
+
+							<li>
+								<a>Opportunities</a>
+								<ul class="sub-menu">
+									<li><a th:href="'/Form_v_1.0/ApplicationController/getApplicationList'" class="dez-page">View Current Opportunities</a></li>
+								</ul>
+							</li>
+								
+							<li>
+								<a th:href="'/Form_v_1.0/login'">login</a>
+ sub menu will appear here
+							</li>
+						</ul>	
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- main header END -->
+    </header>
+    <!-- header END -->
+    <!-- Content -->
+    <div class="page-content bg-white">
+     <!--  <img th:src="@{/resources/JobBoardTemplate/images/y.jpg}"></img> -->
+
+		<div class="content-block">
+            <div class="section-full bg-white browse-job content-inner-2">
+				<div class="container">
+							<div class="row">
+						<div class="col-xl-9 col-lg-8">
+								<ul>
+							 
+								<li>
+							<table class="myTable table hover">
+        <tbody>
+        <tr>
+                <th:span th:each="field : ${tableFields}">
+                
+                  <th:span>
+            <th th:text="#{${field}+'.title'}"></th>
+            </th:span>
+
+  </th:span>
+        </tr>
+        <th:span th:each="bean : ${beanList}"> 
+ <tr>
+                
+                	<th:span th:each="field : ${tableFields}">
+                <!-- <th:span th:if="${field}=='talent_Id' and ${role}=='AdminReviewer'"> -->	
+		<th:span th:if="${field}!='field5'">					
+     <td th:text="${bean.__${field}__}" />
+     </th:span>
+     		<th:span th:if="${field}=='field5'">					
+             <td> <span>
+ 										<a th:href= "@{'/ApplicationController/viewSubmittedApp'(id=${bean.field5})}" th:text="${bean.__${field}__}"></a>
+ 									</span>  </td>
+     </th:span>
+  </th:span>
+ 	
+ </tr>
+
+        </th:span>
+        </tbody>
+  
+    </table>
+							
+   
+</li>
+
+<li>        
+     <div id="pager">
+ <!--    <div class= "form-group"> -->
+                    <form th:action="@{'getSubmittedApplications'}" method="get">
+                    	<th:span  th:if="${currentPage}!='1'">
+  <button name="left" type="submit" class="btn btn-lg -orange" id="btnContactUs">prev</button>
+  <!-- <input name="left" type="hidden" value="   " class="rightSubmit" /> -->
+ <!--  <input type="hidden" name="left" class="previous" value="prev" /> -->
+                    	</th:span>
+                    	
+ <th:span  th:if="${currentPage}!=${nOfPages}">
+  <button name="right" type="submit" class="btn btn-lg -orange" id="btnContactUs">next</button>
+  <!--  <input name="right" type="hidden" value="   " class="rightSubmit" /> -->
+                    	<!-- <input type="hidden" name="right" value="next" class="next" /> -->
+                    	</th:span>
+                    	<div>Page <strong th:text="${currentPage}"></strong> of  <strong th:text="${nOfPages}"></strong>
+                    pages | Total <strong th:text="${nOfRecords}"></strong> records found
+              
+              	<input  type="hidden" th:value="${currentPage}" name="currentPage"/>
+               
+						
+						    
+   </div>
+     
+                    	</form>
+                    <!-- 	</div> -->
+     </div>
+<!-- <ul class="pagination modal-4">
+  <li><a href="#" class="prev">
+
+      Previous
+    </a>
+  </li>
+
+  <li><a href="#" class="next"> Next 
+    
+  </a></li>
+</ul> 
+ -->
+     </li>
+     
+							</ul>
+
+						</div>
+						<div class="col-xl-3 col-lg-4">
+							<div class="sticky-top">
+								<div class="clearfix m-b30">
+									<h5 class="widget-title font-weight-700 text-uppercase">Filter</h5>
+									<div class="">
+									<form action="viewTalentApplications">
+										<select th:name="'appStatus'"  >
+										
+																<option selected="selected" value="">Select Application Status</option>
+																<option>Submitted</option>
+																<option>Screened</option>
+																<option>Rejected</option>
+										</select>
+									<!-- 				<div class="d-flex m-b30">
+											<div class="job-post-company">
+											
+											</div>
+											
+											 </div>  -->    
+										<!-- <input type="text" class="form-control" pattern="[0-9]{1,30}" maxlength="30" placeholder="Insert Talent ID" th:name="talent_Id"></input> -->
+													<div class="d-flex m-b30">
+											<div class="job-post-company">
+											
+											</div>
+											
+											 </div>  
+											 
+							<div class="clearfix m-b30">
+									
+									<div class="">
+									
+										<input name="field1" type="text" class="form-control" placeholder="Insert Fund Name"></input>
+									</div>
+				
+							</div>
+								
+							<div class="clearfix m-b30">
+									
+									<div class="">
+									
+										<input name="field2" type="text" class="form-control" placeholder="Insert Investor Name"></input>
+									</div>
+				
+							</div>
+							
+														<div class="clearfix m-b30">
+									
+									<div class="">
+									
+										<input name="field3" type="text" class="form-control" placeholder="Insert Application Status"></input>
+									</div>
+				
+							</div>	
+							
+														<div class="clearfix m-b30">
+									
+									<div class="">
+									
+										<input name="field5" type="text" class="form-control" placeholder="Insert Application ID"></input>
+									</div>
+				
+							</div>				
+							<div class="clearfix m-b30">
+									
+									<div class="">
+									
+										<input name="fromDate" type="text" class="form-control" placeholder="Insert Start Date"></input>
+									</div>
+				
+							</div>
+							
+									<div class="clearfix m-b30">
+									
+									<div class="">
+									
+										<input name="toDate" type="text" class="form-control" placeholder="Insert End Date"></input>
+									</div>
+				
+							</div> 
+											                       <div class="row">
+                            <div class="col-sm-12 form-group">
+                            <!--  btn-lg btn-success btn-block -->
+                                <button type="submit" class="btn btn-lg -orange" id="btnContactUs">Filter Applications </button>
+                            </div>
+                        </div>
+                         </form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+
+    
+    <!-- Content END-->
+	<!-- Footer -->
+    <footer class="site-footer">
+
+    </footer>
+    <!-- Footer END -->
+    <button class="scroltop fa fa-chevron-up" ></button>
+</div>
+
+
+<!-- JAVASCRIPT FILES ========================================= -->
+<script th:src="@{/resources/JobBoardTemplate/js/jquery.min.js}"></script><!-- JQUERY.MIN JS -->
+<script th:src="@{/resources/JobBoardTemplate/js/wow.js}"></script><!-- WOW JS -->
+<script th:src="@{/resources/JobBoardTemplate/js/popper.min.js}"></script><!-- BOOTSTRAP.MIN JS -->
+<script th:src="@{/resources/JobBoardTemplate/js/bootstrap.min.js}"></script><!-- BOOTSTRAP.MIN JS -->
+<script th:src="@{/resources/JobBoardTemplate/js/bootstrap-select.min.js}"></script><!-- FORM JS -->
+<script th:src="@{/resources/JobBoardTemplate/js/jquery.bootstrap-touchspin.js}"></script><!-- FORM JS -->
+<!-- <script th:src="@{/resources/JobBoardTemplate/js/magnific-popup.js}"></script>MAGNIFIC POPUP JS -->
+<script th:src="@{/resources/JobBoardTemplate/js/waypoints-min.js}"></script><!-- WAYPOINTS JS -->
+<script th:src="@{/resources/JobBoardTemplate/js/counterup.min.js}"></script><!-- COUNTERUP JS -->
+<script th:src="@{/resources/JobBoardTemplate/js/imagesloaded.js}"></script><!-- IMAGESLOADED -->
+<script th:src="@{/resources/JobBoardTemplate/js/masonry-3.1.4.js}"></script><!-- MASONRY -->
+<script th:src="@{/resources/JobBoardTemplate/js/masonry.filter.js}"></script><!-- MASONRY -->
+<script th:src="@{/resources/JobBoardTemplate/js/owl.carousel.js}"></script><!-- OWL SLIDER -->
+<script th:src="@{/resources/JobBoardTemplate/js/rangeslider.js}" ></script><!-- Rangeslider -->
+<script th:src="@{/resources/JobBoardTemplate/js/custom.js}"></script><!-- CUSTOM FUCTIONS  -->
+<script th:src="@{/resources/JobBoardTemplate/js/dz.carousel.js}"></script><!-- SORTCODE FUCTIONS  -->
+<script th:src="@{/resources/JobBoardTemplate/js/dz.ajax.js}"></script><!-- CONTACT JS  -->
+<script th:src="@{/resources/JobBoardTemplate/js/skrollr.min.js}"></script><!-- PAROLLER -->
+
+
+</body>
+
+
+</html>
